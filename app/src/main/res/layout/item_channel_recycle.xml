@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_item_channel"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@drawable/bg_item_channel"
+    android:gravity="center"
+    android:textColor="@color/colorTxtTitle"
+    android:textSize="@dimen/fontSize_middle" />
+

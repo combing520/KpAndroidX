@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingTop="10dp"
+    android:paddingRight="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_live" />
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/logo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="0dp"
+            app:roundHeight="6dp"
+            app:roundWidth="6dp"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"  />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle" />
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#E4E5E4" />
+</LinearLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:layout_marginBottom="@dimen/margin_5"-->
+<!--    android:orientation="vertical">-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/container_live_detail_apps"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/height_label"-->
+<!--        android:background="@color/colorWhite"-->
+<!--        android:gravity="center_vertical"-->
+<!--        android:paddingLeft="@dimen/margin_small"-->
+<!--        android:paddingRight="@dimen/margin_small">-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="@dimen/width_icon_label"-->
+<!--            android:layout_height="@dimen/height_icon_label"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:src="@mipmap/ic_live" />-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/container_live_more"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentRight="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:gravity="center_vertical">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:src="@mipmap/ic_classify_hl" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginLeft="@dimen/margin_small"-->
+<!--                android:text="更多"-->
+<!--                android:textColor="@color/color_home_red"-->
+<!--                android:textSize="@dimen/fontSize_middle" />-->
+<!--        </LinearLayout>-->
+<!--    </RelativeLayout>-->
+
+<!--    <com.youth.banner.Banner-->
+<!--        android:id="@+id/viewPager_live_detail_apps"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/height_banner_special"-->
+<!--        app:banner_layout="@layout/banner2"-->
+<!--        app:indicator_drawable_selected="@drawable/bg_container_indication_select"-->
+<!--        app:indicator_drawable_unselected="@drawable/bg_container_indication_unselect"-->
+<!--        app:indicator_height="@dimen/width_indicator"-->
+<!--        app:indicator_width="@dimen/height_indicator" />-->
+
+<!--</LinearLayout>-->

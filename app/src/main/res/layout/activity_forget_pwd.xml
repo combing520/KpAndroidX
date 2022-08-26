@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+   >
+
+
+    <include layout="@layout/layout_header_not_title" />
+
+
+    <!--银行卡信息-->
+    <!--<LinearLayout style="@style/container_item_withDraw">-->
+
+    <!--<TextView-->
+    <!--style="@style/txt_item_label"-->
+    <!--android:text="银联卡" />-->
+    <!--<TextView-->
+    <!--style="@style/txt_item_label"-->
+    <!--android:layout_marginLeft="@dimen/margin_middle"-->
+    <!--android:text="储蓄卡尾号 (4135)" />-->
+    <!--</LinearLayout>-->
+
+    <TextView
+        style="@style/label_bank_info"
+        android:text="请重新绑定银行卡以找回密码" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_middle" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_forget"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/btn_forget_pwd"
+        style="@style/btn_pink"
+        android:text="下一步" />
+
+
+</LinearLayout>

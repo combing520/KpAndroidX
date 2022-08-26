@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--导航头-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_back_detail_special"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="6dp"
+            android:src="@mipmap/left" />
+
+        <TextView
+            android:id="@+id/txt_title_detail_special"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:lines="1"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <ImageView
+            android:id="@+id/img_share_detail_special"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="6dp"
+            android:src="@mipmap/ccwb_share_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_topView_special"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--顶部信息-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_post_detail_special"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintDimensionRatio="16:9"
+                android:scaleType="centerCrop" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--描述-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_5"
+            android:paddingRight="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_title_special_detail_special"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_middle" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_least"
+                android:gravity="center_vertical">
+
+                <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                    android:id="@+id/img_thumbnail_detail_special"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:scaleType="centerCrop"
+                    app:roundHeight="6dp"
+                    app:roundWidth="6dp" />
+
+                <TextView
+                    android:id="@+id/txt_type_special_detail_special"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_small" />
+
+                <TextView
+                    android:id="@+id/txt_time_special_detail_special"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:layout_weight="1"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_small" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spit"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/colorGray" />
+
+            <!--介绍-->
+            <TextView
+                android:id="@+id/txt_summary_special_detail_special"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_5"
+                android:paddingBottom="@dimen/margin_5"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/margin_least"
+                android:maxLines="3"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="@dimen/fontSize_small" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_detail_special"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/height_spit"
+            android:descendantFocusability="blocksDescendants"
+            android:overScrollMode="never" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

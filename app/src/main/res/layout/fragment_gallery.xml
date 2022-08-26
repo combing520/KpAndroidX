@@ -1,0 +1,9 @@
+<com.luck.picture.lib.photoview.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/img_gallery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:adjustViewBounds="true"
+    tools:context="cn.cc1w.app.ui.ui.detail.gallery.GalleryFragment" />
+
+

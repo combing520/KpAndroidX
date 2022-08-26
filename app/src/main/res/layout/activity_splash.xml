@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--默认显示-->
+    <RelativeLayout
+        android:id="@+id/relate_default_splash"
+        style="@style/container_splash_default">
+
+        <ImageView
+            style="@style/img_splash_default"
+            android:src="@mipmap/bg_splash" />
+
+<!--        <ImageView-->
+<!--            style="@style/img_splash_default_bottom"-->
+<!--            android:src="@mipmap/ccwb_welcome_logo"-->
+<!--            android:visibility="invisible" />-->
+    </RelativeLayout>
+
+    <!--广告图显示-->
+<!--    <LinearLayout-->
+<!--        android:id="@+id/relate_ad_splash"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:visibility="gone">-->
+
+        <ImageView
+            android:id="@+id/img_ad_splash"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"/>
+
+
+<!--    </LinearLayout>-->
+
+    <!--引导图显示-->
+    <app.cloud.ccwb.cn.linlibrary.percent.PercentRelativeLayout
+        android:id="@+id/relate_guider_splash"
+        style="@style/container_splash_default"
+        android:visibility="invisible">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager_bottom_splash"
+            style="@style/container_splash_default"
+            android:persistentDrawingCache="animation" />
+
+        <Button
+            android:id="@+id/btn_start_splash"
+            style="@style/btn_experience_advertisement"
+            android:text="立即体验"
+            android:visibility="invisible"
+            app:layout_marginLeftPercent="30%"
+            app:layout_widthPercent="40%" />
+
+    </app.cloud.ccwb.cn.linlibrary.percent.PercentRelativeLayout>
+
+
+    <TextView
+        android:id="@+id/txt_timer_splash"
+        style="@style/txt_timer_splash"
+        android:visibility="invisible" />
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    >
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <!--储蓄卡-->
+    <LinearLayout style="@style/container_item_withDraw">
+
+        <TextView
+            style="@style/txt_item_label"
+            android:text="储蓄卡" />
+
+        <LinearLayout style="@style/container_item_cardInfo_withDraw">
+
+            <TextView
+                style="@style/txt_item_label_type"
+                android:text="工商银行" />
+
+            <TextView
+                style="@style/txt_item_label_describe"
+                android:text="预计24小时到账" />
+        </LinearLayout>
+
+        <ImageView
+            style="@style/right_arrow"
+            android:layout_gravity="center_vertical"
+            android:src="@mipmap/right" />
+    </LinearLayout>
+
+    <!--金额-->
+    <LinearLayout style="@style/container_item_withDraw">
+
+        <TextView
+            style="@style/txt_item_label"
+            android:text="金额" />
+
+        <EditText
+            style="@style/txt_item_edit_describe"
+            android:hint="提现金额必须大于2"
+            android:longClickable="false"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="20" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/label_bank_info"
+        android:text="可提现金额¥10.00" />
+
+    <TextView
+        android:id="@+id/btn_next_withDraw"
+        style="@style/btn_pink"
+        android:text="下一步" />
+
+
+</LinearLayout>

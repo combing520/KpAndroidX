@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/list_item_classify_apps_home"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_item_news_normal"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginBottom="@dimen/height_spit"
+    android:background="@color/colorWhite"
+    android:overScrollMode="never"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp" />

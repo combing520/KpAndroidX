@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ripple_item_news_group"
+    android:layout_width="220dp"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_news_group_sub_detail_apps"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_marginBottom="@dimen/height_spit"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txt_item_news_group_title_sub_detail_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txt_item_news_group_source_sub_detail_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSize_least" />
+
+            <TextView
+                android:id="@+id/txt_item_news_group_time_sub_detail_apps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="@dimen/fontSize_least" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+

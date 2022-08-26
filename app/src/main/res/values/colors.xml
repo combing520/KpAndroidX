@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--标题栏颜色-->
+    <color name="colorPrimary">#C81F1D</color>
+    <!--状态栏颜色-->
+    <color name="colorPrimaryDark">#C81F1D</color>
+    <!--系统中，子空间，复选框，单选按钮，选中时的颜色-->
+    <color name="colorAccent">#C81F1D</color>
+    <!--灰色-->
+    <color name="colorGray">#F0F0F0</color>
+
+    <!--白色-->
+    <color name="colorWhite">#FFFFFF</color>
+    <!--倒计时默认背景颜色-->
+    <color name="colorTimerNormal">#333333</color>
+    <!--倒计时背景点击颜色-->
+    <color name="colorTimerPress">#666666</color>
+    <!--title文字颜色-->
+    <color name="colorTxtTitle">#000000</color>
+    <!--content文字颜色-->
+    <color name="colorTxtContent">#666666</color>
+    <!--label文字颜色-->
+    <color name="colorTxtLabel">#999999</color>
+    <!--透明颜色-->
+    <color name="colorTransport">#0000</color>
+    <!--半透明颜色-->
+    <color name="colorHalfTransport">#8000</color>
+    <!--粉红色-->
+    <color name="colorPink">#f65153</color>
+    <!--取关颜色-->
+
+    <color name="home_tab_txt_color">#221814</color>
+    <color name="home_tab_txt_color_select">#C81F1D</color>
+
+    <!--黑色-->
+    <color name="colorBlack">#000000</color>
+    <!--首页底部的导航颜色-->
+    <!--选中的球的外部颜色的内部颜色-->
+    <color name="color_ball_normal_solid">#f8f8f8</color>
+    <!--选中的球的外部颜色的线条颜色-->
+    <color name="color_ball_normal_stroke">#999999</color>
+    <!--未选中的球的外部颜色的内部颜色-->
+    <color name="color_ball_select_solid">#feeded</color>
+    <!--未选中的球的外部颜色的线条颜色-->
+    <color name="color_ball_select_stroke">#FFC0CB</color>
+    <!--menu的title的文字颜色-->
+    <color name="color_title_menu">#1a1a1a</color>
+    <!--粉红色-->
+    <!--Tab的选中颜色-->
+    <color name="bg_tab_select">#f7f7f7</color>
+
+    <color name="color_imaginary_pink">#88FFB6C1</color>
+
+    <!--蓝色-->
+    <color name="colorBlue">#4297de</color>
+
+    <!--qrcode-->
+    <color name="player_red">#C81F1D</color>
+    <color name="player_grey">#CCCCCC</color>
+    <color name="bg_color">#EDEDED</color>
+    <color name="contents_text">#ff000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <!--qrcode end-->
+
+    <color name="color_home_red">#C81F1D</color>
+
+    <color name="color_agreenment">#808080</color>
+
+    <color name="color_golden_theme">#fcd94c</color>
+    <color name="color_red_theme">#C81F1D</color>
+    <color name="color_69">#999999</color>
+</resources>

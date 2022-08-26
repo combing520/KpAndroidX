@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.detail.NewsDetailNewActivity">
+
+    <!--导航-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation_new"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/news_detail_back_navigation_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:src="@mipmap/ic_back" />
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/kaipinglogo" />
+
+        <ImageView
+            android:id="@+id/news_detail_share_navigation_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+
+    <!--内容-->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/news_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/height_navigation_new"
+        android:layout_marginBottom="@dimen/height_navigation"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/news_detail_title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:ellipsize="end"
+                android:lineSpacingExtra="@dimen/margin_least"
+                android:maxLines="2"
+                android:textColor="#221814"
+                android:textSize="@dimen/fontSize_20" />
+
+            <!-- 前方的 贴片广告-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_detail_ad_front_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+
+            <!--新闻信息-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/news_detail_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:textColor="#89898A"
+                    android:textSize="@dimen/fontSize_small"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="123" />
+
+                <ImageView
+                    android:id="@+id/news_detail_audio_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@mipmap/ic_audio_play"
+                    app:layout_constraintBottom_toBottomOf="@id/news_detail_type_tv"
+                    app:layout_constraintLeft_toRightOf="@id/news_detail_type_tv"
+                    app:layout_constraintTop_toTopOf="@id/news_detail_type_tv" />
+
+                <TextView
+                    android:id="@+id/news_detail_create_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:textColor="#89898A"
+                    android:textSize="@dimen/fontSize_small"
+                    app:layout_constraintBottom_toBottomOf="@id/news_detail_type_tv"
+                    app:layout_constraintRight_toLeftOf="@id/news_detail_browse_cnt_tv"
+                    app:layout_constraintTop_toTopOf="@id/news_detail_type_tv"
+                    tools:text="123" />
+
+                <TextView
+                    android:id="@+id/news_detail_browse_cnt_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/viewsnumber"
+                    android:gravity="center_vertical"
+                    android:textColor="#89898A"
+                    android:textSize="@dimen/fontSize_small"
+                    app:layout_constraintBottom_toBottomOf="@id/news_detail_type_tv"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/news_detail_type_tv"
+                    tools:text="123" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/audiobarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_container_gray"
+                android:paddingLeft="12dp"
+                android:paddingTop="8dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="8dp"
+                android:visibility="gone"
+                tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/audiobar_play_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@mipmap/ic_audio_play"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/audiobar_time_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/color_69"
+                    android:textSize="10sp"
+                    app:layout_constraintBottom_toBottomOf="@id/audiobar_play_iv"
+                    app:layout_constraintLeft_toRightOf="@id/audiobar_play_iv"
+                    app:layout_constraintTop_toTopOf="@id/audiobar_play_iv"
+                    tools:text="20:00 / 90:00" />
+
+                <ImageView
+                    android:id="@+id/audiobar_close_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="3dp"
+                    android:src="@mipmap/ic_close_channel"
+                    app:layout_constraintBottom_toBottomOf="@id/audiobar_play_iv"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/audiobar_play_iv" />
+
+                <View
+                    android:id="@+id/audiobar_divier"
+                    android:layout_width="1dp"
+                    android:layout_height="12dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@color/color_69"
+                    app:layout_constraintBottom_toBottomOf="@id/audiobar_play_iv"
+                    app:layout_constraintRight_toLeftOf="@id/audiobar_close_iv"
+                    app:layout_constraintTop_toTopOf="@id/audiobar_play_iv" />
+
+                <SeekBar
+                    android:id="@+id/audiobar_seekbar"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="5dp"
+                    android:minHeight="5dp"
+                    android:progressDrawable="@drawable/audio_bg_play_progress"
+                    android:thumb="@drawable/audio_seek_thumb"
+                    app:layout_constraintBottom_toBottomOf="@id/audiobar_play_iv"
+                    app:layout_constraintLeft_toRightOf="@id/audiobar_time_tv"
+                    app:layout_constraintRight_toLeftOf="@id/audiobar_divier"
+                    app:layout_constraintTop_toTopOf="@id/audiobar_play_iv"
+                    tools:max="100"
+                    tools:progress="50" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <cn.cc1w.app.ui.widget.MWebView
+                android:id="@+id/news_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle" />
+
+
+            <!--后方的切片广告-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/news_detail_ad_back_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:overScrollMode="never"
+                android:visibility="gone" />
+            <!--相关新闻-->
+            <LinearLayout
+                android:id="@+id/news_detail_relate_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--相关新闻-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_spit"
+                        android:layout_weight="1"
+                        android:background="#FFE4E5E4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:text="相关新闻"
+                        android:textColor="#C81F1D"
+                        android:textSize="@dimen/fontSize_normal" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_spit"
+                        android:layout_weight="1"
+                        android:background="#FFE4E5E4" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/news_detail_relate_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+            <!--热门评论-->
+            <LinearLayout
+                android:id="@+id/news_detail_comment_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:drawableLeft="@mipmap/ic_comment_detail_news"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:gravity="center_vertical"
+                    android:text="评论"
+                    android:textColor="#EBA518"
+                    android:textSize="@dimen/fontSize_normal" />
+
+                <!--评论列表-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/news_detail_comment_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:id="@+id/news_detail_commend_more_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_middle"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:paddingTop="@dimen/margin_small"
+                    android:paddingBottom="@dimen/margin_small"
+                    android:text="显示全部评论"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_middle" />
+
+            </LinearLayout>
+            <!--推荐新闻-->
+            <LinearLayout
+                android:id="@+id/news_detail_recommend_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_big"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_spit"
+                        android:layout_weight="1"
+                        android:background="#FFE4E5E4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:text="推荐阅读"
+                        android:textColor="#EBA518"
+                        android:textSize="@dimen/fontSize_normal" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_spit"
+                        android:layout_weight="1"
+                        android:background="#FFE4E5E4" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/news_detail_recommend_recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:overScrollMode="never" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--底部-->
+    <LinearLayout
+        android:id="@+id/news_detail_bottom_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:layout_alignParentBottom="true"
+        android:background="#FFE4E5E4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/news_detail_comment_ll"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingBottom="@dimen/margin_least"
+                android:src="@mipmap/ic_write" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="说点什么..."
+                android:textColor="@color/colorTxtLabel" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/news_detail_comment_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/comment" />
+
+        <ImageView
+            android:id="@+id/news_detail_like_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/like" />
+
+        <ImageView
+            android:id="@+id/news_detail_share_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/share" />
+
+    </LinearLayout>
+
+    <!--空白页-->
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/news_detail_blank"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/height_navigation_new"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+</RelativeLayout>

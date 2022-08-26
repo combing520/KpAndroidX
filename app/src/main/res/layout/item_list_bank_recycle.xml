@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/container_item_bank">
+    <!--银行卡信息-->
+    <RelativeLayout style="@style/bank_info">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_bank_small_list"
+            style="@style/icon_bank_info"
+            app:roundHeight="@dimen/margin_middle"
+            app:roundWidth="@dimen/margin_middle" />
+
+        <TextView
+            android:id="@+id/txt_item_bank_name"
+            style="@style/title_item_bank"
+            android:layout_toRightOf="@id/img_item_bank_small_list" />
+
+        <TextView
+            android:id="@+id/txt_item_bank_type"
+            style="@style/type_item_bank"
+            android:layout_below="@id/img_item_bank_small_list"
+            android:layout_toRightOf="@id/img_item_bank_small_list" />
+
+    </RelativeLayout>
+
+
+    <!--右侧的图片-->
+    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+        android:id="@+id/img_item_bank_list"
+        style="@style/img_bank_info"
+        app:roundHeight="@dimen/width_icon_item_small_bank"
+        app:roundWidth="@dimen/width_icon_item_small_bank" />
+
+    <TextView
+        style="@style/type_cardNumber_item_bank"
+        android:text="✽✽✽✽   ✽✽✽✽   ✽✽✽✽   1243" />
+
+
+</RelativeLayout>

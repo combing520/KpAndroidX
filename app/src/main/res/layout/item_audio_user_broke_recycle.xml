@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/margin_middle"
+    android:gravity="right"
+    android:paddingLeft="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_small">
+
+    <LinearLayout
+        android:id="@+id/ll_audio_user_broke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_middle"
+        android:background="@drawable/bg_container_broke_user"
+        android:gravity="center"
+        android:minWidth="80dp">
+
+        <TextView
+            android:id="@+id/txt_time_voice_user_broke"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <View
+            android:id="@+id/img_animation_voice_user_broke"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:background="@mipmap/ic_voice_play3_broke_right" />
+    </LinearLayout>
+
+    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+        android:id="@+id/img_avatar_voice_user_broke"
+        style="@style/img_avatar_broke"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+</LinearLayout>

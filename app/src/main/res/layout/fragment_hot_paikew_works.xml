@@ -1,0 +1,237 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.home.record.fragment.HotPaikewWorksFragment">
+    <!--热门标签-->
+    <LinearLayout
+        android:id="@+id/ll_container_tag_topic"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/margin_middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="热门标签:"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_tag_topic_hot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:overScrollMode="never" />
+
+    </LinearLayout>
+    <!--人气榜-->
+    <LinearLayout
+        android:id="@+id/ll_container_popularity"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingTop="@dimen/margin_small">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:src="@mipmap/ic_flag_paikew" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:text="人气榜 :"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+    </LinearLayout>
+    <!--热门视频和热门视频-->
+    <LinearLayout
+        android:id="@+id/ll_container_hot_topic"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="90dp"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_middle"
+        android:paddingBottom="@dimen/margin_small">
+
+        <!--视频人气榜-->
+        <LinearLayout
+            android:id="@+id/ll_rank_video_topic_hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_video_paikew_hot"
+            android:orientation="vertical">
+
+            <!--上面部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="视频人气榜"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontSize_normal" />
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_right_white" />
+
+            </LinearLayout>
+
+
+            <!--下面部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:layout_marginRight="@dimen/margin_small">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_video_paikew" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Top : 1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontSize_normal" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--照片人气榜-->
+        <LinearLayout
+            android:id="@+id/ll_rank_pic_topic_hot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@drawable/bg_picture_paikew_hot"
+            android:orientation="vertical">
+
+            <!--上面部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="照片人气榜"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontSize_normal" />
+
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@mipmap/ic_right_white" />
+
+            </LinearLayout>
+
+            <!--下面部分-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:layout_marginRight="@dimen/margin_small">
+
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@mipmap/ic_album_paikew" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:text="Top : 1"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontSize_normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_works_topic_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/height_spit"
+            android:descendantFocusability="blocksDescendants"
+            android:overScrollMode="never" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/blank_topic_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

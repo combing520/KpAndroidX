@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfTransport">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_middle"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle">
+
+        <TextView
+            android:id="@+id/txt_gaode_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:background="@drawable/bg_container_dialog_raduis_top"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="高德地图"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <TextView
+            android:id="@+id/txt_tencent_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="腾讯地图"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <TextView
+            android:id="@+id/txt_baidu_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0.5dp"
+            android:background="@drawable/bg_container_dialog_raduis_bottom"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="百度地图"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+
+        <TextView
+            android:id="@+id/txt_cancel_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:background="@drawable/bg_container_dialog_raduis"
+            android:gravity="center"
+            android:padding="@dimen/margin_small"
+            android:text="取消"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

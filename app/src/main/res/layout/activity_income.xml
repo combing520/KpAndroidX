@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:background="@drawable/bg_container_red"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_middle"
+        android:paddingTop="@dimen/margin_middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="0.00"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_large"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="累计收入(元): 0.00"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:text="最低提现额: 10元"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_normal" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/label_bank_info"
+        android:text="收益记录" />
+
+    <!--菜单选中-->
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_income"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_tab"
+        android:layout_marginTop="@dimen/margin_middle"
+        android:background="@color/colorWhite"
+        app:tabIndicatorHeight="@dimen/margin_least"
+        app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+        app:tabTextColor="@color/colorTxtTitle" />
+
+    <FrameLayout
+        android:id="@+id/container_income"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

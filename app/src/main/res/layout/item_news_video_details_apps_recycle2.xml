@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_5"
+    android:layout_marginVertical="@dimen/margin_5"
+    android:background="@drawable/bg_raduis_top_white"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container_item_active_news"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_video_home"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:scaleType="centerCrop"
+            app:border_width="0dp"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:roundHeight="6dp"
+            app:roundWidth="6dp" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_play"
+            app:layout_constraintBottom_toBottomOf="@+id/img_item_video_home"
+            app:layout_constraintEnd_toEndOf="@+id/img_item_video_home"
+            app:layout_constraintStart_toStartOf="@+id/img_item_video_home"
+            app:layout_constraintTop_toTopOf="@id/img_item_video_home" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txt_item_describe_video_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_10"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:paddingHorizontal="@dimen/margin_least"
+        android:textColor="@color/home_tab_txt_color"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_item_name_video_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/ic_watch" />
+
+            <TextView
+                android:id="@+id/txt_item_watch_video_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_like" />
+
+            <TextView
+                android:id="@+id/txt_item_like_video_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginLeft="15dp"
+                android:src="@mipmap/ic_comment" />
+
+            <TextView
+                android:id="@+id/txt_item_cnt_video_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="10sp" />
+
+            <ImageView
+                android:id="@+id/img_share_video_home"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_marginStart="25dp"
+                android:src="@mipmap/ic_share" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
+

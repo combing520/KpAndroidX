@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/margin_middle">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_avatar_item_comment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="center"
+            app:roundHeight="20dp"
+            app:roundWidth="20dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/margin_small">
+
+            <TextView
+                android:id="@+id/txt_username_item_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal" />
+
+            <TextView
+                android:id="@+id/txt_time_item_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_small" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_appreciate_item_comment"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/margin_least" />
+
+        <TextView
+            android:id="@+id/txt_appreciate_item_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_middle"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_content_item_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_least"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:id="@+id/txt_title_item_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:textColor="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_normal" />
+</LinearLayout>

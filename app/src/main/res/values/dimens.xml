@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="height_spit">1dp</dimen>
+    <dimen name="margin_least">3dp</dimen>
+    <dimen name="margin_5">5dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_middle">15dp</dimen>
+    <dimen name="margin_big">20dp</dimen>
+    <dimen name="margin_large">30dp</dimen>
+    <dimen name="fontSize_least">10sp</dimen>
+
+    <dimen name="fontSize_smallest">8sp</dimen>
+    <dimen name="fontSize_small">12sp</dimen>
+    <dimen name="fontSize_13">13sp</dimen>
+    <dimen name="fontSize_normal">14sp</dimen>
+    <dimen name="fontSize_middle">16sp</dimen>
+    <dimen name="fontSize_large">25sp</dimen>
+    <dimen name="fontSize_big">18sp</dimen>
+    <dimen name="fontSize_20">20sp</dimen>
+    <dimen name="width_icon_function">30dp</dimen>
+    <dimen name="height_icon_function">30dp</dimen>
+    <dimen name="width_indicator">8dp</dimen>
+    <dimen name="width_dot">6dp</dimen>
+    <dimen name="height_dot">6dp</dimen>
+    <dimen name="height_navigation">48dp</dimen>
+    <dimen name="height_navigation_new">44dp</dimen>
+    <dimen name="height_item_setting">48dp</dimen>
+    <dimen name="width_radius_sign">40dp</dimen>
+    <dimen name="height_dialog_bottom_avatar_picker">48dp</dimen>
+    <dimen name="width_icon_small">20dp</dimen>
+    <dimen name="height_icon_small">20dp</dimen>
+    <!--银行卡信息条目-->
+    <dimen name="height_item_container">100dp</dimen>
+    <dimen name="width_icon_item_small_bank">30dp</dimen>
+    <dimen name="width_icon_item_big_bank">60dp</dimen>
+    <dimen name="height_tab">48dp</dimen>
+    <dimen name="height_list_earn">140dp</dimen>
+    <dimen name="height_tab_login">48dp</dimen>
+    <dimen name="height_spit_small">0.5dp</dimen>
+    <dimen name="height_edit">32dp</dimen>
+    <dimen name="width_btn_verification">120dp</dimen>
+    <dimen name="height_item_news_normal">114dp</dimen>
+    <dimen name="height_btn">44dp</dimen>
+    <dimen name="width_icon_share">45dp</dimen>
+    <dimen name="height_icon_share">45dp</dimen>
+    <dimen name="width_icon_label">40dp</dimen>
+    <dimen name="height_icon_label">18dp</dimen>
+    <dimen name="height_btn_load_more">40dp</dimen>
+    <dimen name="height_label">36dp</dimen>
+    <dimen name="title_height">50dp</dimen>
+    <dimen name="size_18sp">18sp</dimen>
+    <dimen name="size_14dp">14dp</dimen>
+    <dimen name="width_icon_bottom_nav_new">20dp</dimen>
+    <dimen name="height_icon_bottom_nav_new">20dp</dimen>
+
+</resources>

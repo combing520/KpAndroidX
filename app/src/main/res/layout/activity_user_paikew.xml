@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.home.record.UserPaikewActivity">
+
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--顶部信息-->
+        <RelativeLayout style="@style/container_top_photograph1">
+
+            <ImageView
+                style="@style/img_top_photograph"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_usercenter_top_paikew" />
+
+            <!--用户信息-->
+            <LinearLayout style="@style/container_userInfo_photograph">
+                <!--用户名称-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_marginRight="@dimen/margin_middle">
+
+                    <TextView
+                        android:id="@+id/txt_username_photograph"
+                        style="@style/txt_username_photograph"
+                        android:text="用户昵称" />
+
+                    <ImageView
+                        android:id="@+id/txt_focus_photograph"
+                        style="@style/container_focus_add_photograph" />
+                </LinearLayout>
+
+                <!--描述-->
+                <!--<TextView-->
+                <!--android:id="@+id/txt_describe_photograph"-->
+                <!--style="@style/txt_describe_photograph"-->
+                <!--android:text="这个人很懒,没有留下任何签名～" />-->
+                <!---->
+
+                <TextView
+                    android:id="@+id/txt_describe_photograph"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle"
+                    android:text="这个人很懒,没有留下任何签名～" />
+
+                <!--粉丝信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_marginRight="@dimen/margin_middle">
+                    <!--关注-->
+                    <LinearLayout
+                        android:id="@+id/ll_focus_photograph"
+                        style="@style/container_item_grid_photograph">
+
+                        <TextView
+                            android:id="@+id/txt_cnt_follow_photograph"
+                            style="@style/txt_item_grid_cnt_photograph"
+                            android:layout_width="wrap_content"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/txt_item_grid_label_photograph"
+                            android:text="关注" />
+                    </LinearLayout>
+                    <!--粉丝-->
+                    <LinearLayout
+                        android:id="@+id/ll_fans_photograph"
+                        style="@style/container_item_grid_photograph">
+
+                        <TextView
+                            android:id="@+id/txt_cnt_fans_photograph"
+                            style="@style/txt_item_grid_cnt_photograph"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/txt_item_grid_label_photograph"
+                            android:text="粉丝" />
+                    </LinearLayout>
+
+                    <!--被赞-->
+                    <LinearLayout style="@style/container_item_grid_photograph">
+
+                        <TextView
+                            android:id="@+id/txt_cnt_prise_photograph"
+                            style="@style/txt_item_grid_cnt_photograph"
+                            android:layout_height="wrap_content"
+                            android:text="0" />
+
+                        <TextView
+                            style="@style/txt_item_grid_label_photograph"
+                            android:text="被赞" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:background="@mipmap/ic_arc_bottom_paikew" />
+            </LinearLayout>
+
+            <!--头像-->
+            <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                android:id="@+id/img_avatar_photograph"
+                style="@style/img_avatar_photograph"
+                app:roundHeight="30dp"
+                app:roundWidth="30dp" />
+
+            <!--Tabs-->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_record_photograph"
+                style="@style/container_tab_photograph"
+                app:tabIndicatorColor="@color/colorPrimary"
+                app:tabIndicatorHeight="2dp"
+                app:tabSelectedTextColor="@color/colorTxtTitle"
+                app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+                app:tabTextColor="@color/colorTxtContent" />
+
+        </RelativeLayout>
+        <!--底部Viewpager-->
+
+        <FrameLayout
+            android:id="@+id/container_photograph"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

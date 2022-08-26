@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/img_item_view"
+            android:layout_width="@dimen/width_dot"
+            android:layout_height="@dimen/height_dot"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/bg_shape_dot_red" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_item_view"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:textColor="@color/home_tab_txt_color"
+            android:textSize="@dimen/fontSize_big" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp">
+
+        <View
+            android:id="@+id/img_dot2_view"
+            android:layout_width="@dimen/width_dot"
+            android:layout_height="@dimen/height_dot"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/bg_shape_dot_red" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img_dot2_view"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/home_tab_txt_color"
+            android:textSize="@dimen/fontSize_big" />
+    </RelativeLayout>
+
+</LinearLayout>

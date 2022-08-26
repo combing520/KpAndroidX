@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_title_tag"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:background="@drawable/bg_container_category_paikew"
+    android:gravity="center"
+    android:minWidth="60dp"
+    android:paddingBottom="@dimen/margin_least"
+    android:paddingLeft="@dimen/margin_small"
+    android:paddingRight="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_least"
+    android:textColor="@drawable/bg_txt_category_paikew"
+    android:textSize="@dimen/fontSize_small" />
+
+

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--导航头-->
+    <include layout="@layout/layout_header_not_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:background="@color/colorGray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@color/colorWhite">
+
+        <!--我的通知-->
+        <LinearLayout
+            android:id="@+id/ll_message_messageAndComment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/width_icon_small"
+                android:layout_height="@dimen/height_icon_small"
+                android:src="@mipmap/ic_notice_hollow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="我的通知"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal" />
+
+        </LinearLayout>
+
+
+        <!--我的评论-->
+        <LinearLayout
+            android:id="@+id/ll_comment_messageAndComment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/width_icon_small"
+                android:layout_height="@dimen/height_icon_small"
+                android:src="@mipmap/ic_comment_hollow" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="我的评论"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container_messageAndComment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

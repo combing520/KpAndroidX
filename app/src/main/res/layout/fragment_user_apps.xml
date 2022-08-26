@@ -1,0 +1,206 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.fragment.UserAppsFragment">
+
+    <!--顶部搜索-->
+    <LinearLayout
+        android:id="@+id/ll_search_apps"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginLeft="@dimen/margin_middle"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_middle"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@color/colorWhite"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:padding="@dimen/margin_small"
+            android:src="@mipmap/ic_search_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:background="@color/colorTransport"
+            android:gravity="center"
+            android:paddingLeft="@dimen/margin_small"
+            android:text="搜索订阅，关键词"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_normal" />
+
+    </LinearLayout>
+
+    <!-- 底部信息-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--热门推荐-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="- 热门推荐 -"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_spit"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:background="@color/colorGray" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_recommend_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingTop="@dimen/margin_5"
+                    android:paddingBottom="@dimen/margin_5" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_5" />
+
+
+            <!--我的关注-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_navigation"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="我的关注"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle" />
+
+                <TextView
+                    android:id="@+id/btn_edit_favorite_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/margin_small"
+                    android:text="编辑"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontSize_middle" />
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_focus_favorite_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_spit"
+                android:background="@color/colorWhite"
+                android:overScrollMode="never" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorWhite"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_height="wrap_content">
+
+                <com.youth.banner.Banner
+                    android:id="@+id/list_banner_apps"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:scaleType="centerCrop"
+                    tl:banner_indicator_normal_color="@color/colorGray"
+                    tl:banner_indicator_normal_width="@dimen/margin_small"
+                    tl:banner_indicator_selected_color="@color/colorPrimary"
+                    tl:banner_indicator_selected_width="@dimen/margin_small"
+                    tl:layout_constraintDimensionRatio="3:2"
+                    tl:layout_constraintLeft_toLeftOf="parent"
+                    tl:layout_constraintRight_toRightOf="parent"
+                    tl:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!--底部的推荐应用号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_navigation"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="编辑推荐"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle" />
+
+                <!--更多-->
+                <LinearLayout
+                    android:id="@+id/ll_more_apps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@mipmap/ic_classify_hl" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text="更多"
+                        android:textColor="@color/color_home_red"
+                        android:textSize="@dimen/fontSize_middle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--推荐更多的应用号-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_appsRecommend_apps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/height_spit"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

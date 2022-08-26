@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_item_recommend_child_apps_home"
+    style="@style/container_item_classify">
+
+    <View
+        android:id="@+id/spit_item_recommend_child_apps_home"
+        style="@style/spit_item_classify_apps1" />
+
+    <LinearLayout
+
+        style="@style/container_item_classify_recommend1"
+        android:layout_below="@id/spit_item_recommend_child_apps_home">
+
+        <View
+            android:layout_width="@dimen/margin_small"
+            android:layout_height="@dimen/margin_small"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="@dimen/margin_small"
+            android:background="@drawable/bg_circle_red_hollow" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_item_title_recommend_child_apps_home"
+                style="@style/txt_item_classify_recommend_title_apps" />
+            <TextView
+                android:id="@+id/txt_item_describe_recommend_child_apps_home"
+                style="@style/txt_item_classify_recommend_describe_apps" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

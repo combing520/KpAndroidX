@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--导航头-->
+    <include layout="@layout/layout_header_black_title" />
+
+    <RelativeLayout
+        android:layout_width="0px"
+        android:layout_height="0px"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.cc1w.app.ui.widget.video.CoverVideoPlayer
+            android:id="@+id/video_player_detail_video"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:visibility="gone"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_detail_video"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--视频信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small">
+
+                <TextView
+                    android:id="@+id/txt_title_video_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/margin_least"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:gravity="center_vertical">
+
+                    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                        android:id="@+id/img_thumbnail_video_detail"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:scaleType="centerCrop"
+                        app:roundHeight="6dp"
+                        app:roundWidth="6dp" />
+
+                    <TextView
+                        android:id="@+id/txt_type_video_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/colorTxtLabel"
+                        android:textSize="@dimen/fontSize_small" />
+
+                    <TextView
+                        android:id="@+id/txt_time_video_detail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:layout_weight="1"
+                        android:textColor="@color/colorTxtLabel"
+                        android:textSize="@dimen/fontSize_small" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_spit"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:background="@color/colorGray" />
+
+            <!--介绍-->
+            <app.cloud.ccwb.cn.linlibrary.expand.ExpandableTextView
+                android:id="@+id/txt_summary_video_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                expandableTextView:animAlphaStart="1"
+                expandableTextView:maxCollapsedLines="4">
+
+                <TextView
+                    android:id="@id/expandable_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:lineSpacingExtra="@dimen/margin_least"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_normal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="@dimen/margin_least">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/height_spit"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="#E4E5E4" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_middle"
+                        android:gravity="center_vertical"
+                        android:text="详情"
+                        android:textColor="#89898A"
+                        android:textSize="@dimen/fontSize_small" />
+
+                    <ImageButton
+                        android:id="@id/expand_collapse"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+                        android:padding="@dimen/margin_small" />
+                </LinearLayout>
+
+            </app.cloud.ccwb.cn.linlibrary.expand.ExpandableTextView>
+
+            <!--热门评论-->
+            <LinearLayout
+                android:id="@+id/ll_comment_detail_news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_navigation"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@color/colorWhite"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle">
+
+                    <View
+                        android:layout_width="@dimen/margin_least"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/margin_middle"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_middle"
+                        android:background="@color/color_home_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="热门评论"
+                        android:textColor="@color/color_home_red"
+                        android:textSize="@dimen/fontSize_big" />
+                </LinearLayout>
+                <!--评论列表-->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_commend_detail_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:overScrollMode="never" />
+
+                <TextView
+                    android:id="@+id/txt_comment_all_detail_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_btn_load_more"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginRight="@dimen/margin_middle"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:background="@color/colorGray"
+                    android:gravity="center"
+                    android:text="显示全部评论"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_middle" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <!--底部评论-->
+    <LinearLayout
+        android:id="@+id/ll_bottom_detail_video"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="#FFE4E5E4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_comment_detail_video"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/margin_least"
+            android:src="@mipmap/ic_comment_news"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/edit_comment_detail_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingBottom="@dimen/margin_least"
+                android:src="@mipmap/ic_write" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="说点什么..."
+                android:textColor="@color/colorTxtLabel" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/news_detail_comment_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/comment" />
+
+        <ImageView
+            android:id="@+id/news_detail_like_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/like" />
+
+        <ImageView
+            android:id="@+id/img_share_detail_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/share" />
+
+        <LinearLayout
+            android:id="@+id/relate_collection_detail_news"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <cn.cc1w.app.ui.widget.ThumbUpView.ThumbUpView
+                android:id="@+id/img_collection_detail_video"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/blank_parent_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/img_back_function_user"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_least"
+            android:padding="6dp"
+            android:src="@mipmap/left" />
+
+        <TextView
+            android:id="@+id/txt_function_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <TextView
+            android:id="@+id/txt_edit_function_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:text="编辑"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+
+    </RelativeLayout>
+
+    <View style="@style/spit_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--我的功能-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_navigation"
+            android:layout_marginBottom="@dimen/height_spit"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:text="我的功能"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_function_focused"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/colorWhite"
+            android:overScrollMode="never"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small" />
+
+        <!--全部应用-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_navigation"
+            android:layout_marginBottom="@dimen/height_spit"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:text="全部应用"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_function_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:overScrollMode="never"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_middle" />
+
+    </LinearLayout>
+
+</LinearLayout>

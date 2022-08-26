@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorGray"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.map.MapDetailActivity">
+
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/mapView_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_middle"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="[位置]"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <TextView
+            android:id="@+id/txt_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="云南日报集团生活区"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_normal" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

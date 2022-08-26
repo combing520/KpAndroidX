@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.wallet.bank.BankListAddActivity">
+
+    <include layout="@layout/layout_header_not_title" />
+
+
+    <!--输入卡号-->
+    <LinearLayout style="@style/layout_item_bank_normal">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="@string/bank_carkNumber" />
+
+        <EditText
+            style="@style/edit_item_bank_phone"
+            android:longClickable="false"
+            android:hint="@string/bank_cardNumber_input" />
+
+    </LinearLayout>
+
+    <!--下一步-->
+    <TextView
+        android:id="@+id/btn_next_bank_add"
+        style="@style/btn_pink"
+        android:text="@string/next_step" />
+
+</LinearLayout>

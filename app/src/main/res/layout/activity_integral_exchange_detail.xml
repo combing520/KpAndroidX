@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.integral.IntegralExchangeDetailActivity">
+
+    <!--导航头-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/img_back_integralExchangeDetail"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_least"
+            android:padding="6dp"
+            android:src="@mipmap/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="话费对话券"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:background="@color/colorGray" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--顶部-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_middle">
+
+                <ImageView
+                    android:id="@+id/img_integralExchangeDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:scaleType="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_normal" />
+                <!--价格描述-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_least"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@mipmap/money" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:lines="1"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/fontSize_normal" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_middle"
+                        android:lines="1"
+                        android:textColor="@color/colorTxtLabel"
+                        android:textSize="@dimen/fontSize_normal" />
+
+                </LinearLayout>
+
+                <!--兑换时间-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_normal" />
+            </LinearLayout>
+
+            <!--使用规则-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="使用规则流程"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineSpacingExtra="@dimen/margin_least"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_normal" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:lineSpacingExtra="@dimen/margin_least"
+                    android:textColor="@color/colorTxtLabel"
+                    android:textSize="@dimen/fontSize_normal" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/txt_integralExchangeDetail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="立即兑换"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_big" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

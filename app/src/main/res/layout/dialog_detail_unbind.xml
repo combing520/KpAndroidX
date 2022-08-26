@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_big"
+        android:layout_marginRight="@dimen/margin_big"
+        android:background="@drawable/bg_container_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/margin_middle">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_big"
+            android:paddingTop="@dimen/margin_big"
+            android:text="是否解除该银行卡绑定"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_spit"
+            android:background="@color/colorGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_navigation"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txt_dialog_unbind_cancel"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSize_big" />
+
+            <View
+                android:layout_width="@dimen/height_spit"
+                android:layout_height="match_parent"
+                android:background="@color/colorGray" />
+
+            <TextView
+                android:id="@+id/txt_dialog_unbind_confirm"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="解除"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSize_big" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

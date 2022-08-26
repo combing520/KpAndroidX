@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.usercenter.permission.MicrophoneActivity">
+
+
+
+    <include
+        layout="@layout/layout_header_not_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/margin_middle"
+        android:padding="@dimen/margin_middle">
+
+        <ImageView
+            android:id="@+id/topImg"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"  />
+
+        <TextView
+            android:id="@+id/labelTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginVertical="@dimen/margin_middle"
+            android:text="允许访问麦克风权限"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="允许访问麦克风权限麦克风权限，用于发布视频内容时录制声音"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_small" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/container"
+        style="@style/item2Setting">
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="管理麦克风权限" />
+        <ImageView
+            style="@style/right_arrow"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+
+
+</LinearLayout>

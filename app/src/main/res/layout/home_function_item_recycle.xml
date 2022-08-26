@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_middle">
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="64dp"-->
+    <!--        android:layout_height="64dp"-->
+    <!--        android:background="@mipmap/function_button"-->
+    <!--        android:visibility="gone">-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/function_name_tv"-->
+    <!--            android:layout_width="40dp"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:gravity="center"-->
+    <!--            android:maxLines="2"-->
+    <!--            android:textColor="#C81F1D"-->
+    <!--            android:textSize="@dimen/fontSize_normal" />-->
+    <!--    </RelativeLayout>-->
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop" />
+
+</RelativeLayout>

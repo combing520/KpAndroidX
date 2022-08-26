@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--导航头-->
+    <include layout="@layout/layout_header_not_title" />
+
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="@dimen/margin_middle">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_broke"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/height_spit"
+            android:descendantFocusability="blocksDescendants"
+            android:overScrollMode="never" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingTop="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/img_voice_broke"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/ic_voice_broke" />
+
+            <ImageView
+                android:id="@+id/img_add_broke"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:src="@mipmap/ic_add_broke" />
+
+            <EditText
+                android:id="@+id/edit_broke"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@drawable/bg_container_edit_gary"
+                android:gravity="center_vertical"
+                android:hint="输入新消息..."
+                android:longClickable="false"
+                android:maxHeight="64dp"
+                android:minHeight="@dimen/height_edit"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:textColor="@color/colorTxtContent"
+                android:textColorHint="@color/colorTxtLabel"
+                android:textSize="@dimen/fontSize_small" />
+
+
+            <TextView
+                android:id="@+id/txt_voice_broke"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/height_edit"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:background="@drawable/bg_container_edit_gary"
+                android:gravity="center"
+                android:text="按住说话"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/txt_send_broke"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_edit"
+                android:background="@drawable/bg_container_pink"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:text="发送"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_middle" />
+
+        </LinearLayout>
+        <!--底部菜单-->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/grid_bottom_brok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:visibility="gone"
+            app:columnCount="3"
+            app:rowCount="1">
+
+            <!--图片-->
+            <LinearLayout
+                android:id="@+id/ll_album_broke"
+                style="@style/item_container_login_fast_grid"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/item_icon_login_fast_grid"
+                    android:src="@mipmap/ic_gallery_paikew" />
+
+                <TextView
+                    style="@style/item_txt_login_fast_grid1"
+                    android:text="图片" />
+
+            </LinearLayout>
+
+            <!--拍摄-->
+            <LinearLayout
+                android:id="@+id/ll_picture_broke"
+                style="@style/item_container_login_fast_grid"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/item_icon_login_fast_grid"
+                    android:src="@mipmap/ic_shoot_paikew" />
+
+                <TextView
+                    style="@style/item_txt_login_fast_grid1"
+                    android:text="拍摄" />
+
+            </LinearLayout>
+
+            <!--位置-->
+            <LinearLayout
+                android:id="@+id/ll_location_broke"
+                style="@style/item_container_login_fast_grid"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/item_icon_login_fast_grid"
+                    android:src="@mipmap/ic_location_paikew" />
+
+                <TextView
+                    style="@style/item_txt_login_fast_grid1"
+                    android:text="位置" />
+
+            </LinearLayout>
+
+
+            <!--视频-->
+            <LinearLayout
+                style="@style/item_container_login_fast_grid"
+                android:visibility="gone"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView style="@style/item_icon_login_fast_grid" />
+
+                <TextView style="@style/item_txt_login_fast_grid1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/item_container_login_fast_grid"
+                tools:ignore="UseCompoundDrawables">
+
+            </LinearLayout>
+
+        </androidx.gridlayout.widget.GridLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

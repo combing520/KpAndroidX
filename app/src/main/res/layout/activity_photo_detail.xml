@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--顶部导航头-->
+    <include layout="@layout/layout_header_not_title" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView_photo_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/height_spit"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--用户信息-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                    android:id="@+id/img_avatar_photo_detail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
+                    app:roundHeight="20dp"
+                    app:roundWidth="20dp" />
+
+                <TextView
+                    android:id="@+id/txt_username_photo_detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:paddingLeft="@dimen/margin_small"
+                    android:paddingRight="@dimen/margin_small"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_normal" />
+
+                <ImageView
+                    android:id="@+id/btn_focus_add_photo_detail"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp" />
+            </LinearLayout>
+
+            <!--照片名称信息-->
+            <TextView
+                android:id="@+id/txt_title_photo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="@dimen/margin_least"
+                android:layout_marginBottom="@dimen/margin_least"
+                android:layout_weight="1"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle"
+                android:textColor="@color/colorTxtContent"
+                android:textSize="@dimen/fontSize_normal" />
+
+            <!--照片图片展示，多图或者是单图-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp">
+
+                    <ImageView
+                        android:id="@+id/img_photo_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone"
+                        app:layout_constraintDimensionRatio="4:3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_photo_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:overScrollMode="never" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="25dp">
+                    <!--广告-->
+                    <LinearLayout
+                        android:id="@+id/ll_promotion_detail_photo_paikew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_big"
+                        android:background="@drawable/bg_advertisement_photo_paikew"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/txt_promotion_detail_photo_paikew"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingLeft="@dimen/margin_small"
+                            android:paddingTop="@dimen/margin_least"
+                            android:paddingRight="@dimen/margin_least"
+                            android:paddingBottom="@dimen/margin_least"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fontSize_small" />
+
+                        <ImageView
+                            android:layout_width="12dp"
+                            android:layout_height="12dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/ic_right_white" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <!--视频底部信息-->
+            <androidx.gridlayout.widget.GridLayout
+                android:id="@+id/grid_photo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_middle"
+                android:paddingTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_small"
+                android:visibility="gone"
+                app:columnCount="3"
+                app:rowCount="1">
+
+                <!--喜欢-->
+                <LinearLayout
+                    android:id="@+id/ll_like_photo_detail"
+                    style="@style/container_item_grid"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    tools:ignore="UseCompoundDrawables">
+
+
+                    <cn.cc1w.app.ui.widget.ThumbUpView.ThumbUpView
+                        android:id="@+id/img_collection_photo_detail"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center" />
+
+                    <TextView
+                        android:id="@+id/cnt_collection_photo_detail"
+                        style="@style/txt_item_label_grid"
+                        android:text="0" />
+
+                </LinearLayout>
+                <!--消息-->
+                <LinearLayout
+                    android:id="@+id/ll_message_photo_detail"
+                    style="@style/container_item_grid"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        style="@style/img_item_grid"
+                        android:src="@mipmap/ic_message_gary" />
+
+                    <TextView
+                        android:id="@+id/cnt_message_photo_detail"
+                        style="@style/txt_item_label_grid"
+                        android:text="0" />
+                </LinearLayout>
+                <!--分享数-->
+                <LinearLayout
+                    android:id="@+id/ll_share_photo_detail"
+                    style="@style/container_item_grid"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1"
+                    tools:ignore="UseCompoundDrawables">
+
+                    <ImageView
+                        style="@style/img_item_grid"
+                        android:src="@mipmap/ic_share_gary" />
+
+                    <TextView
+                        style="@style/txt_item_label_grid"
+                        android:text="" />
+
+                </LinearLayout>
+
+
+            </androidx.gridlayout.widget.GridLayout>
+
+            <View
+                android:id="@+id/view_spit_detail_photo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_small"
+                android:background="@color/colorGray"
+                android:visibility="gone" />
+
+            <!--评论列表-->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentAdapter_photo_detail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical" />
+
+            <app.cloud.ccwb.cn.linlibrary.loading.view.LoadCircleView
+                android:id="@+id/footer_photo_detail"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/blankView_photo_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+
+    <!--底部-->
+    <LinearLayout
+        android:id="@+id/ll_bottom_photo_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="#FFE4E5E4"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/commend_photo_detail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:padding="@dimen/margin_least"
+            android:src="@mipmap/ic_comment_news"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/edit_commend_photo_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingBottom="@dimen/margin_least"
+                android:src="@mipmap/ic_write" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="说点什么..."
+                android:textColor="@color/colorTxtLabel" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/img_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/comment" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

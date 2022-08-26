@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="fontSize_middle">16sp</dimen>
+
+    <dimen name="torchMarginTop">80dp</dimen>
+</resources>

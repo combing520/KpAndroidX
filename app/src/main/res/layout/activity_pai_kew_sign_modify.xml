@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <View style="@style/spit_line" />
+
+    <EditText
+        android:id="@+id/edit_update_username_paikew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/colorTransport"
+        android:hint="请输入签名"
+        android:longClickable="false"
+        android:maxLength="40"
+        android:minHeight="@dimen/height_edit"
+        android:textColor="@color/colorTxtTitle"
+        android:textColorHint="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/height_edit"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:gravity="center_vertical"
+        android:text="填写个性签名更容易获得别人的关注哦~"
+        android:textColor="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_small" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:id="@+id/txt_update_cnt_paikew"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:text="0/40"
+        android:textColor="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_small" />
+
+
+</LinearLayout>

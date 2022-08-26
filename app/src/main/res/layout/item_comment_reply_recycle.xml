@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_small"
+    android:orientation="vertical">
+    <!--评论回复-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_avatar_comment_sub_detail_news"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerCrop"
+            app:roundHeight="20dp"
+            app:roundWidth="20dp" />
+        <!--回复-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+            <TextView
+                android:id="@+id/txt_item_replyName_comment_sub_detail_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:text="回复"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/fontSize_normal"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txt_item_username_comment_sub_detail_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/colorTxtTitle"
+                android:textSize="@dimen/fontSize_normal" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txt_item_describe_comment_sub_detail_news"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="56dp"
+        android:textColor="@color/colorTxtTitle"
+        android:lineSpacingExtra="@dimen/margin_least"
+        android:layout_marginRight="@dimen/margin_small"
+        android:textSize="@dimen/fontSize_normal" />
+</LinearLayout>

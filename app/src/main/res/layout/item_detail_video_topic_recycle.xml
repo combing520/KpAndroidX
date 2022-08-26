@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="160dp">
+    <ImageView
+        android:id="@+id/img_post_detail_video_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/img_play_detail_video_topic"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:src="@mipmap/ic_play_video_paikew" />
+
+    <!--视频-->
+    <LinearLayout
+        android:id="@+id/ll_video_detail_video_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#4000"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:padding="@dimen/margin_small">
+
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@mipmap/ic_click_number_video_paikew" />
+
+        <TextView
+            android:id="@+id/txt_cnt_detail_video_topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_small" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_prise_detail_video_topic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_small"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorWhite"
+        android:background="#4000"
+        android:visibility="gone"
+        android:gravity="right"
+        android:textSize="@dimen/fontSize_small" />
+</RelativeLayout>

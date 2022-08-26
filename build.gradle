@@ -1,0 +1,54 @@
+buildscript {
+    ext.kotlin_version = '1.5.31'
+    repositories {
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://s01.oss.sonatype.org/content/groups/public" }
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath 'com.jakewharton:butterknife-gradle-plugin:10.2.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        // NOTE: Do not place your application dependencies here; they belong
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url 'https://www.jitpack.io' }
+        maven {
+            url uri("${rootProject.projectDir}/repo")
+        }
+        maven {
+            credentials {
+                username 'admin'
+                password '6435c5f6bae247e7cd'
+            }
+            url 'http://maven.ccwb.cn/repository/maven-releases/'
+        }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/google' }
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        maven { url "https://jitpack.io" }
+        maven {
+            url 'https://dl.bintray.com/cjt/maven'
+        }
+        maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        maven { url 'https://dl.bintray.com/umsdk/release' }
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

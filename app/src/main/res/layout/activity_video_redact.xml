@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.home.video.VideoRedactActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle">
+
+
+        <ImageView
+            android:id="@+id/img_back_video_redact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:padding="@dimen/margin_least"
+            android:src="@mipmap/ic_left_white" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_volume_paikew" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:src="@mipmap/ic_music_paikew" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+    <cn.cc1w.app.ui.widget.video.PaikewPreviewVideoPlayer
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <cn.cc1w.app.ui.widget.relate.SquareRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <cn.cc1w.app.ui.widget.relate.SquareGLSurfaceView
+            android:id="@+id/surfaceView_video_redact"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </cn.cc1w.app.ui.widget.relate.SquareRelativeLayout>
+
+    <!--底部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:layout_marginRight="@dimen/margin_middle">
+            <!--效果-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:id="@+id/ll_effect_video_redact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_effect_paikew" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_least"
+                        android:text="特效"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_cover_video_redact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_cover_paikew" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_least"
+                        android:text="选封面"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_small" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_filter_video_redact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_filter_paikew" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_least"
+                        android:text="滤镜"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_small" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_record_video_redact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@mipmap/ic_record_paikew" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_least"
+                        android:text="录音"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_small" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--下一步-->
+            <TextView
+                android:id="@+id/btn_next_video_redact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_least"
+                android:text="下一步"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/margin_middle" />
+        </LinearLayout>
+        <!--特效-->
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/gridLayout_video_redact"
+            style="@style/container_grid_video_redact"
+            android:layout_marginTop="@dimen/margin_small"
+            app:columnCount="5"
+            app:rowCount="1">
+
+            <LinearLayout
+                android:id="@+id/ll_speed_slowest_video_redact"
+                style="@style/container_item_grid"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/img_item_grid1"
+                    android:src="@mipmap/ic_circle_paikew" />
+
+                <TextView
+                    android:id="@+id/txt_speed_slowest_video_redact"
+                    style="@style/txt_item_grid1"
+                    android:text="极慢" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_speed_slow_video_redact"
+                style="@style/container_item_grid"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/img_item_grid1"
+                    android:src="@mipmap/ic_circle_paikew" />
+
+                <TextView
+                    android:id="@+id/txt_speed_slow_video_redact"
+                    style="@style/txt_item_grid1"
+                    android:text="慢" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_speed_normal_video_redact"
+                style="@style/container_item_grid"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/img_item_grid1"
+                    android:src="@mipmap/ic_circle_paikew" />
+
+                <TextView
+                    android:id="@+id/txt_speed_normal_video_redact"
+                    style="@style/txt_item_grid1"
+                    android:text="正常" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_speed_fast_video_redact"
+                style="@style/container_item_grid"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/img_item_grid1"
+                    android:src="@mipmap/ic_circle_paikew" />
+
+                <TextView
+                    android:id="@+id/txt_speed_fast_video_redact"
+                    style="@style/txt_item_grid1"
+                    android:layout_width="wrap_content"
+                    android:text="快" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_speed_fastest_video_redact"
+                style="@style/container_item_grid"
+                app:layout_columnWeight="1"
+                app:layout_rowWeight="1"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    style="@style/img_item_grid1"
+                    android:src="@mipmap/ic_circle_paikew" />
+
+                <TextView
+                    android:id="@+id/txt_speed_fastest_video_redact"
+                    style="@style/txt_item_grid1"
+                    android:text="极快" />
+
+            </LinearLayout>
+
+        </androidx.gridlayout.widget.GridLayout>
+        <!--封面-->
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_cover_video_redact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/colorHalfTransport"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_small"
+            android:visibility="gone" />
+
+        <!--滤镜-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycle_video_redact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/colorHalfTransport"
+
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/margin_least"
+            android:paddingTop="@dimen/margin_small"
+            android:visibility="gone" />
+
+        <!--录音-->
+    </LinearLayout>
+
+
+</LinearLayout>

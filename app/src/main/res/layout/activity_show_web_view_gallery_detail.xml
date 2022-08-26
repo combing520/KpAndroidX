@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack"
+    android:orientation="vertical">
+
+    <app.cloud.ccwb.cn.linlibrary.viewpager.LinViewpager
+        android:id="@+id/viewPager_detail_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large">
+
+        <ImageView
+            android:id="@+id/img_back_header_detail_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="@dimen/margin_least"
+            android:src="@mipmap/ic_back_white" />
+
+        <TextView
+            android:id="@+id/txt_cnt_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:lines="1"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_middle" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txt_save_gallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/margin_middle"
+        android:layout_marginBottom="@dimen/margin_big"
+        android:drawableBottom="@mipmap/download"
+        android:gravity="center"
+        android:drawablePadding="@dimen/margin_least"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_least"
+        android:textColor="@color/colorWhite" />
+
+</RelativeLayout>
+
+

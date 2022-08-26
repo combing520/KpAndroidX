@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_pop_comment_paikew"
+    android:maxHeight="700dp"
+    android:minHeight="350dp"
+    android:orientation="vertical">
+    <!--顶部信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle">
+
+        <TextView
+            android:id="@+id/txt_cnt_detail_news"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <ImageView
+            android:id="@+id/img_close_detail_news"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="@dimen/margin_10"
+            android:src="@mipmap/ic_close_comment_paikew" />
+
+
+    </LinearLayout>
+
+    <!--中间列表-->
+    <com.scwang.smart.refresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle">
+
+        <com.scwang.smart.refresh.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_detail_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/height_spit"
+            android:descendantFocusability="blocksDescendants"
+            android:overScrollMode="never" />
+
+        <com.scwang.smart.refresh.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    <TextView
+        android:id="@+id/txt_detail_news"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle"
+        android:text="暂时没有评论，点击重试"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="#FFE4E5E4"
+        android:gravity="center_vertical">
+
+        <LinearLayout
+            android:id="@+id/edit_pop_list_comment_paikew"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_weight="1"
+            android:background="@color/colorWhite"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingBottom="@dimen/margin_least"
+                android:src="@mipmap/ic_write" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text="说点什么..."
+                android:textColor="@color/colorTxtLabel" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/news_detail_comment_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:padding="@dimen/margin_5"
+            android:src="@mipmap/comment" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

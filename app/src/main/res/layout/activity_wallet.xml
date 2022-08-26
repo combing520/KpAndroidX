@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.wallet.WalletActivity">
+
+    <!--导航头-->
+    <include layout="@layout/layout_header_not_title" />
+
+    <!--顶部-->
+    <LinearLayout style="@style/container_bank_top">
+
+        <TextView
+            style="@style/txt_bank_label"
+            android:text="账户余额(元)" />
+
+        <TextView
+            style="@style/txt_bank_price"
+            android:text="¥0.00" />
+
+        <View style="@style/spit_line_vertical_white_top" />
+
+        <!--收入 提现-->
+        <LinearLayout style="@style/container_btn_bank_wallet">
+
+            <TextView
+                android:id="@+id/txt_income_wallet"
+                style="@style/btn_bank_wallet"
+                android:text="收入" />
+
+            <View style="@style/spit_line_vertical_white" />
+
+            <TextView
+                android:id="@+id/txt_withdraw_wallet"
+                style="@style/btn_bank_wallet"
+                android:text="提现" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--条目-->
+    <LinearLayout
+        android:id="@+id/ll_bankCard_wallet"
+        style="@style/detail_bank_info">
+
+        <TextView
+            style="@style/detail_label_bank_info"
+            android:text="@string/hint_bank" />
+
+        <TextView
+            style="@style/detail_label_bank_wallet_info"
+            android:text="1张" />
+
+        <ImageView
+            style="@style/img_item_right"
+            android:src="@mipmap/right" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,23 @@
+package cn.cc1w.app.ui.widget.camera.view;
+
+import android.graphics.Bitmap;
+/**
+ * @author kpinfo
+ */
+public interface CameraView {
+    void resetState(int type);
+
+    void confirmState(int type);
+
+    void showPicture(Bitmap bitmap, boolean isVertical);
+
+    void playVideo(Bitmap firstFrame, String url);
+
+    void stopVideo();
+
+    void setTip(String tip);
+
+    void startPreviewCallback();
+
+    boolean handlerFoucs(float x, float y);
+}

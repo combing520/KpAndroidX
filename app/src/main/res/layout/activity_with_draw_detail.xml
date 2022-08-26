@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--导航头-->
+    <include layout="@layout/layout_header_not_title" />
+
+    <!--提现状态-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/icon3" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:text="已提交银行处理"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!--到账时间-->
+    <LinearLayout style="@style/layout_item_withDraw">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="预计到账时间" />
+
+        <TextView
+            style="@style/content_item_bank"
+            android:text="预计24个小时到账" />
+    </LinearLayout>
+
+    <!--卡类型-->
+    <LinearLayout style="@style/layout_item_withDraw">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="储蓄卡" />
+
+        <TextView
+            style="@style/content_item_bank"
+            android:text="工商银行尾号(9517)" />
+    </LinearLayout>
+
+    <!--提现金额-->
+    <LinearLayout style="@style/layout_item_withDraw">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="提现金额" />
+
+        <TextView
+            style="@style/content_item_bank"
+            android:text="10.00元" />
+    </LinearLayout>
+
+    <!--提现完成-->
+    <TextView
+        android:id="@+id/btn_complete_detail_withDraw"
+        style="@style/btn_pink"
+        android:text="完成" />
+
+</LinearLayout>

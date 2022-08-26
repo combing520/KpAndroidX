@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_middle"
+    android:layout_marginRight="@dimen/margin_small"
+    android:orientation="horizontal">
+
+    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+        android:id="@+id/img_avatar_system_broke"
+        style="@style/img_avatar_broke"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+
+    <TextView
+        android:id="@+id/txt_describe_system_broke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_middle"
+        android:layout_marginRight="68dp"
+        android:background="@drawable/bg_container_broke_system"
+        android:lineSpacingExtra="@dimen/margin_least"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_small"
+        android:textColor="@color/colorTxtContent"
+        android:textSize="@dimen/fontSize_middle" />
+</LinearLayout>

@@ -1,0 +1,221 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.jakewharton.butterknife'
+
+def releaseTime() {
+    return new Date().format("yyyy_MM_dd_HH_mm_ss")
+}
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        applicationId "cn.cc1w.app.ui"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 7024
+        versionName "7.024"
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary = true
+
+        resConfigs "zh"
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+        //ndk生成配置
+        ndk {
+            moduleName "native"
+//            abiFilters "armeabi-v7a"
+            abiFilters "armeabi-v7a", "arm64-v8a"
+//            cFlags "-Wall -O2 -U_FORTIFY_SOURCE -fstack-protector-all"
+//            abiFilters "armeabi-v7a"
+//            abiFilters "armeabi-v7a", "armeabi", "x86", "mips"
+        }
+
+        manifestPlaceholders = [
+                MI_APP_ID : "2882303761517144193",
+                MI_APP_KEY: "5901714475193"
+        ]
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    compileOptions {
+        sourceCompatibility '1.8'
+        targetCompatibility '1.8'
+    }
+    signingConfigs {
+        release {
+            storeFile file('/Users/kpinfo/Desktop/work/ccwb.keystore')
+            storePassword "password"
+            keyAlias "mykey"
+            keyPassword "password"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.release
+            jniDebuggable false
+            zipAlignEnabled true
+        }
+        release {
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            jniDebuggable false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //解决包冲突导致编译不正常问题
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/LGPL2.1'
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    repositories {
+        flatDir { dirs 'libs' }
+    }
+
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "KaiPingNews_app_v${variant.versionName}_${releaseTime()}.apk"
+        }
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation files('libs/pldroid-shortvideo-3.3.0.jar')
+    implementation project(path: ':camerax')
+    implementation project(path: ':FFmpegAndroid')
+    implementation files('libs/umeng-share-QQ-full-7.1.6.jar')
+    implementation files('libs/umeng-share-wechat-full-7.1.6.jar')
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':httplibrary')
+
+    //Tab--AndroidX
+    implementation 'io.github.h07000223:flycoTabLayout:3.0.0'
+    //banner--AndroidX
+    implementation 'io.github.youth5201314:banner:2.2.2'
+    // 动态权限申请库--AndroidX
+    implementation 'pub.devrel:easypermissions:3.0.0'
+    // json 解析库
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    // 突破天花板 库
+//    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'org.xutils:xutils:3.9.0'
+
+    // 视图绑定库--AndroidX
+    api 'com.jakewharton:butterknife:10.2.3'
+    kapt 'com.jakewharton:butterknife-compiler:10.2.3'
+    // 基础依赖包，必须要依赖--AndroidX
+    implementation 'com.geyifeng.immersionbar:immersionbar:3.2.2'
+    // kotlin扩展（可选）--AndroidX
+    implementation 'com.geyifeng.immersionbar:immersionbar-ktx:3.2.2'
+
+    // PictureSelector basic (Necessary)
+    implementation 'io.github.lucksiege:pictureselector:v3.10.5'
+    // image compress library (Not necessary)
+    implementation 'io.github.lucksiege:compress:v3.10.4'
+
+    // uCrop library (Not necessary)
+    implementation 'io.github.lucksiege:ucrop:v3.10.4'
+    // glide加载图片
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    // 网格布局--AndroidX
+    implementation 'androidx.gridlayout:gridlayout:1.0.0'
+    // RecycleView 列表--AndroidX
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    // materialDesign
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'org.greenrobot:eventbus:3.2.0'
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    // 流式布局，支持单选、多选等，适合用于产品标签等。
+    implementation 'com.hyman:flowlayout-lib:1.1.2'
+    implementation 'cn.jzvd:jiaozivideoplayer:7.7.0'
+
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-java:v8.3.2-release-jitpack'
+    implementation 'com.github.CarGuo.GSYVideoPlayer:GSYVideoPlayer-exo2:v8.3.2-release-jitpack'
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-arm64:v8.3.2-release-jitpack'
+    api 'com.github.CarGuo.GSYVideoPlayer:gsyVideoPlayer-armv7a:v8.3.2-release-jitpack'
+
+    //   webSocket
+    implementation 'com.neovisionaries:nv-websocket-client:2.6'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation project(':linlibrary')
+    implementation 'com.googlecode.mp4parser:isoparser:1.1.21'
+    implementation 'ren.qinc.edgetranslucent:lib:0.0.3'
+    implementation 'cn.ccwb:push:1.8.8'
+
+    api 'cn.kpinfo:log:1.3.5'
+
+    implementation 'com.amap.api:location:5.2.0'
+    implementation 'com.amap.api:3dmap:7.8.0'
+    implementation 'com.amap.api:search:7.7.0'
+//    api 'com.tencent.tbs:tbssdk:44176'
+    api 'com.tencent.tbs:tbssdk:44216'
+
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.11'
+    implementation 'com.github.li-xiaojun:XPopup:v2.2.23'
+    implementation 'com.github.arvinljw:ItemDecorationHelper:v2.0.0'
+
+    api 'com.umeng.umsdk:common:9.4.2' // (必选)
+    api 'com.umeng.umsdk:asms:1.4.1' // asms包依赖(必选)
+    api 'com.umeng.umsdk:apm:1.4.2'
+    api 'com.umeng.umsdk:share-core:7.1.6'
+
+    implementation files('libs/umeng-share-QQ-full-7.1.6.jar')
+    implementation files('libs/umeng-share-sina-full-7.1.6.jar')
+    implementation files('libs/umeng-share-wechat-full-7.1.6.jar')
+    implementation files('libs/umeng-shareboard-widget-7.1.6.jar')
+    implementation files('libs/umeng-sharetool-7.1.6.jar')
+
+    //新浪官方依赖库
+    implementation(name: 'openDefault-10.10.0', ext: 'aar')
+    //QQ官方依赖库
+    implementation 'com.tencent.tauth:qqopensdk:3.53.0'
+    //微信官方依赖库
+    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:6.7.9'
+
+//    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+}

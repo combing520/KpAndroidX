@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+
+    <include layout="@layout/layout_header_not_title" />
+
+
+    <TextView
+        style="@style/label_bank_info"
+        android:text="请设置6位数字的支付密码,建议勿与银行卡取款密码相同" />
+
+    <app.cloud.ccwb.cn.linlibrary.edit.PayPsdInputView
+        android:id="@+id/edit_pwd_bank_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_middle"
+        android:inputType="number" />
+
+
+    <TextView
+        android:id="@+id/btn_pwd_bank_setting"
+        style="@style/btn_pink"
+        android:text="完成" />
+
+</LinearLayout>

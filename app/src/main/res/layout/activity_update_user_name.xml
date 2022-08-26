@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <View style="@style/spit_line" />
+
+    <EditText
+        android:id="@+id/edit_update_username"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_edit"
+        android:layout_margin="@dimen/margin_small"
+        android:background="@color/colorTransport"
+        android:ellipsize="end"
+        android:hint="请输入昵称"
+        android:longClickable="false"
+        android:maxLength="15"
+        android:textColor="@color/colorTxtTitle"
+        android:textColorHint="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_normal" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@color/colorGray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="长度限制为2-15个字符,不允许包含空格"
+        android:textColor="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_small" />
+
+
+    <TextView
+        android:id="@+id/btn_submit_username"
+        style="@style/btn_pink"
+        android:text="完成" />
+
+
+</LinearLayout>

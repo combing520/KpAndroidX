@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp"
+    android:background="@color/colorWhite"
+    android:paddingRight="15dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_pic_news_normal_home"
+            android:layout_width="120dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:border_width="0dp"
+            app:roundHeight="6dp"
+            app:roundWidth="6dp"
+            app:layout_constraintDimensionRatio="4:3"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@id/img_layout">
+
+        <ImageView
+            android:layout_width="34dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical|left"
+            android:src="@drawable/ic_topic" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:visibility="gone"
+            android:layout_gravity="right|center_vertical"
+            android:src="@drawable/ic_more" />
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/img_layout"
+        android:layout_marginTop="20dp"
+        android:background="#E4E5E4" />
+
+    <TextView
+        android:id="@+id/txt_item_title_news_normal_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/divider"
+        android:layout_below="@id/top_layout"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/img_layout"
+        android:ellipsize="end"
+        android:gravity="left|top"
+        android:maxLines="2"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</RelativeLayout>

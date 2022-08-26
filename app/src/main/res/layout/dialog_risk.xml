@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransport"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_dialog_radius"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="风险提示"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tv_content_policy_dialog"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="@dimen/margin_middle"
+            android:layout_marginTop="@dimen/margin_big"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/margin_5"
+            android:text="该操作将清除您所有账户数据且不可恢复，请确认注销账户！"
+            android:textColor="#323232"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+
+        <View
+            android:id="@+id/spit_line"
+            style="@style/spit_line"
+            android:layout_marginTop="@dimen/margin_big"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_content_policy_dialog" />
+
+
+        <TextView
+            android:id="@+id/quit"
+            android:layout_width="0px"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="放弃"
+            android:textColor="#E8382F"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@id/spit"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/spit_line" />
+
+        <View
+            android:id="@+id/spit"
+            android:layout_width="2px"
+            android:layout_height="40dp"
+            android:background="@color/colorGray"
+            app:layout_constraintBottom_toBottomOf="@id/quit"
+            app:layout_constraintEnd_toStartOf="@id/confirm"
+            app:layout_constraintStart_toEndOf="@id/quit"
+            app:layout_constraintTop_toTopOf="@id/quit" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="0px"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:text="确认注销"
+            android:textColor="#999899"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/quit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/spit"
+            app:layout_constraintTop_toTopOf="@id/quit" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>

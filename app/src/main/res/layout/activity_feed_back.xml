@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header_not_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_spit"
+        android:background="@color/colorGray" />
+
+
+    <EditText
+        android:id="@+id/edit_feedback"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/bg_container_edit_gary"
+        android:gravity="left|top"
+        android:hint="请输入反馈内容"
+        android:lineSpacingExtra="@dimen/margin_least"
+        android:longClickable="false"
+        android:minHeight="160dp"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/contents_text"
+        android:textColorHint="@color/colorTxtLabel"
+        android:textSize="@dimen/fontSize_normal"
+        app:layout_marginLeftPercent="5%"
+        app:layout_widthPercent="90%" />
+
+    <TextView
+        android:id="@+id/btn_send_feedback"
+        style="@style/btn_pink"
+        android:text="发送" />
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

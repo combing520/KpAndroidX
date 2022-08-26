@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.home.upload.HotTopicTagActivity">
+
+    <!--顶部-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <LinearLayout style="@style/container_home_search">
+
+            <ImageView
+                style="@style/icon_home_search"
+                android:src="@mipmap/ic_search" />
+
+            <EditText
+                style="@style/edit_home_search"
+                android:longClickable="false"
+                android:hint="搜索话题" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/txt_cancel_topic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:text="取消"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_middle" />
+
+    </LinearLayout>
+
+    <View style="@style/spit_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:src="@mipmap/ic_hot_topic" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:text="热门话题"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_topic_hot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+</LinearLayout>

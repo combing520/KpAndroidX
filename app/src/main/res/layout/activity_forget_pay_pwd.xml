@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/layout_header_not_title" />
+
+
+    <TextView
+        style="@style/label_bank_info"
+        android:text="@string/type_bank_choose" />
+
+    <!--卡类型-->
+    <LinearLayout style="@style/layout_item_bank_normal">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="@string/type_bank" />
+
+        <EditText
+            style="@style/edit_item_bank_normal"
+            android:focusable="false"
+            android:longClickable="false"
+            android:focusableInTouchMode="false"
+            android:hint="@string/bank_cardNumber_input" />
+    </LinearLayout>
+
+    <!--持卡人-->
+    <LinearLayout style="@style/layout_item_bank_no_border">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="@string/card_holder" />
+
+        <EditText
+            style="@style/edit_item_bank_normal"
+            android:longClickable="false"
+            android:hint="@string/bank_name_input" />
+
+    </LinearLayout>
+    <!--身份证-->
+    <LinearLayout style="@style/layout_item_bank_no_top_bottom">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="@string/id_card" />
+
+        <EditText
+            style="@style/edit_item_bank_normal"
+            android:longClickable="false"
+            android:hint="@string/id_card_input" />
+
+    </LinearLayout>
+    <!--手机号-->
+    <LinearLayout style="@style/layout_item_bank_normal">
+
+        <TextView
+            style="@style/label_item_bank"
+            android:text="@string/phone" />
+
+        <EditText
+            style="@style/edit_item_bank_phone"
+            android:longClickable="false"
+            android:hint="@string/phone_input" />
+
+    </LinearLayout>
+
+    <!--同意协议-->
+    <LinearLayout style="@style/protocol_item_container_bank">
+
+        <CheckBox
+            style="@style/checkBox"
+            android:text="@string/agree" />
+
+        <TextView
+            style="@style/protocol_item_bank"
+            android:text="@string/protocol_agree" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_forget_pwd_pay"
+        style="@style/btn_pink"
+        android:text="@string/next_step" />
+
+</LinearLayout>

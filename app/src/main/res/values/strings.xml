@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">开屏新闻</string>
+    <!--  Remove or change this placeholder text -->
+    <string name="doubleClickQuit">再按一次退出程序</string>
+    <string name="messageAndComment">我的消息</string>
+    <string name="setting">设置</string>
+    <string name="feedback">意见反馈</string>
+    <string name="wallet">钱包</string>
+    <string name="list_bank">银行卡</string>
+    <string name="bank_add">添加银行卡</string>
+    <string name="agree">同意</string>
+    <string name="next_step">下一步</string>
+    <string name="bank_carkNumber">卡号:</string>
+    <string name="bank_cardNumber_input">输入银行卡卡号</string>
+    <string name="type_bank_choose">选择银行卡类型</string>
+    <string name="type_bank">卡类型:</string>
+    <string name="card_holder">持卡人:</string>
+    <string name="bank_name_input">*某(请输入完整姓名)</string>
+    <string name="id_card">身份证:</string>
+    <string name="id_card_input">输入持卡人对应身份证号</string>
+    <string name="phone">手机号:</string>
+    <string name="phone_input">输入银行预留手机号</string>
+    <string name="protocol_agree">《服务协议》</string>
+    <string name="bank_info_input">填写银行卡信息</string>
+    <string name="detail_bank">银行卡详情</string>
+    <string name="hint_bank">银行卡</string>
+    <string name="img">hint_img</string>
+    <string name="hint_login_fast">手机快捷登录</string>
+    <string name="hint_input_verification">请输入验证码</string>
+    <string name="hint_input_phone">请输入手机号</string>
+    <string name="hint_verification_obtain">获取验证码</string>
+    <string name="hint_login">登录</string>
+    <string name="hint_txt_login">你还可以选择以下登录方式</string>
+    <string name="hint_account_register">注册账号</string>
+    <string name="hint_verification_code_input">请输入验证码</string>
+    <string name="hint_submit">提交</string>
+    <string name="network_error">当前网络不可用</string>
+    <!--空白页begin-->
+    <string name="focus_none">还未关注任何人哦~</string>
+    <string name="fans_none">暂无粉丝，继续加油哦~</string>
+    <string name="result_apps_none">抱歉! 没有相关应用号</string>
+    <string name="news_none">你所查看的新闻不存在!</string>
+    <string name="record_history_none">暂无历史浏览记录</string>
+    <string name="comment_none">暂无任何评论消息,要积极参加哦~</string>
+    <string name="collection_none">暂无收藏,快去添加收藏吧!</string>
+    <string name="notice_none">暂未收到任何通知</string>
+    <string name="history_browse">浏览历史</string>
+    <string name="clear">清空</string>
+    <string name="news_apps_none">暂无相关新闻</string>
+    <string name="str_video_paikew_none">暂无视频</string>
+    <string name="str_video_paikew_none_click">暂无视频,点击加载</string>
+    <string name="str_picture_paikew_none">暂无图片</string>
+    <string name="str_like_paikew_none">你还没有喜欢的内容</string>
+    <string name="network_error_try_click">网络找不到了~  点击重试</string>
+    <string name="try_again">点击重试</string>
+    <string name="str_version_lastest">当前已是最新版本</string>
+    <string name="hint_search_none">抱歉 ! 没有搜到相关结果</string>
+    <string name="error_content_share">获取分享内容错误</string>
+    <string name="hit_code_incognizant">无法识别的图片</string>
+    <string name="paikew_pic_release_notification">TA发布了拍客照片，快来看一看吧</string>
+    <string name="paikew_video_release_notification">TA发了一个拍客视频，快来看一看吧</string>
+    <!--空白页end-->
+    <string name="str_login_hint">点击登录</string>
+    <string name="time_down">%d 秒后跳过</string>
+    <string-array name="bottom_navigation_txt">
+        <item>首页</item>
+        <item>拍客</item>
+        <item>开屏号</item>
+        <item>功能</item>
+        <item>我的</item>
+    </string-array>
+
+</resources>

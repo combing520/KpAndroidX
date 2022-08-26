@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container_comment_dialog"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/margin_middle"
+        android:layout_marginRight="@dimen/margin_middle"
+        android:background="@color/colorGray"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_navigation"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_small">
+
+            <ImageView
+                android:id="@+id/btn_close_dialog_commend"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/margin_least"
+                android:src="@mipmap/ic_comment_news" />
+
+            <TextView
+                android:id="@+id/btn_send_dialog_commend"
+                android:layout_width="56dp"
+                android:layout_height="@dimen/height_edit"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/bg_container_pink"
+                android:gravity="center"
+                android:text="发送"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_middle" />
+
+        </RelativeLayout>
+        <!--输入框-->
+
+        <EditText
+            android:id="@+id/edit_dialog_commend"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_container_edit_white"
+            android:gravity="center_vertical|top"
+            android:hint="说点什么..."
+            android:maxLines="10"
+            android:minHeight="160dp"
+            android:padding="@dimen/margin_small"
+            android:longClickable="false"
+            android:textColor="@color/colorTxtTitle"
+            android:textColorHint="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_small" />
+
+    </LinearLayout>
+
+</RelativeLayout>

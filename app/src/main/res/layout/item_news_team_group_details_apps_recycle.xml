@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_small"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/txt_title_team_group_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_icon_label"
+            android:layout_centerVertical="true"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <LinearLayout
+            android:id="@+id/ll_team_group_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/classify" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="更多"
+                android:textColor="@color/color_home_red"
+                android:textSize="@dimen/fontSize_middle" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.youth.banner.Banner
+        android:id="@+id/viewPager_team_group_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tl:banner_indicator_height="@dimen/width_indicator"
+        tl:banner_indicator_normal_color="@color/colorWhite"
+        tl:banner_indicator_normal_width="@dimen/width_indicator"
+        tl:banner_indicator_selected_color="@color/colorPrimary"
+        tl:banner_indicator_selected_width="@dimen/width_indicator" />
+
+</LinearLayout>

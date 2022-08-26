@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorTransport"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/bg_dialog_radius"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="温馨提示"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/fontSize_middle"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_content_policy_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_middle"
+            android:lineSpacingExtra="@dimen/margin_least"
+            android:text="欢迎使用“开屏新闻”！我们非常重视您的个人信息和隐私保护。在您使用“开屏新闻”之前，请仔细阅读《隐私政策》，我们将严格按照您同意的各项条款使用您的个人信息，以便为您提供更好的服务。"
+            android:textColor="#4c4c4c"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="@dimen/margin_middle"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_middle"
+            android:lineSpacingExtra="@dimen/margin_least"
+            android:text="如您同意此政策，请点击“同意”并开始使用我们的产品和服务，我们尽全力保护您的个人信息安全。"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <TextView
+            android:id="@+id/btn_open_policy_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_marginLeft="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:layout_marginRight="@dimen/margin_big"
+            android:background="@drawable/btn_policy"
+            android:gravity="center"
+            android:text="同意"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <TextView
+            android:id="@+id/btn_dismiss_policy_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_least"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:text="不同意"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_middle" />
+
+    </LinearLayout>
+
+</RelativeLayout>

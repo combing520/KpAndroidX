@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.home.record.PromotionDetailActivity">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <cn.cc1w.app.ui.widget.MWebView
+        android:id="@+id/webView_promotion_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>

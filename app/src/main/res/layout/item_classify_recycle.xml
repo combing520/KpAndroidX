@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/container_item_classify">
+
+    <LinearLayout style="@style/container_item_classify_apps">
+
+        <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+            android:id="@+id/img_item_app_list"
+            style="@style/img_item_classify_big_apps"
+            android:scaleType="centerCrop"
+            app:roundHeight="@dimen/margin_small"
+            app:roundWidth="@dimen/margin_small" />
+
+        <RelativeLayout
+            android:id="@+id/ll_top_item_app"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:layout_weight="1">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:gravity="center_vertical">
+                <!--左侧的内容-->
+                <LinearLayout
+
+                    style="@style/container_item_classify_describe_apps">
+
+                    <TextView
+                        android:id="@+id/txt_title_item_app_list"
+                        style="@style/txt_item_classify_title_apps" />
+
+                    <TextView
+                        android:id="@+id/txt_describe_item_app_list"
+                        style="@style/txt_item_classify_describe_apps" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_btn_add_item_app_list"
+            style="@style/btn_item_classify_add_apps" />
+
+    </LinearLayout>
+    <View style="@style/spit_item_classify_apps" />
+    <!--推荐新闻-->
+    <RelativeLayout
+        android:id="@+id/ll_recommend_item_app_list"
+        style="@style/container_item_classify_recommend">
+        <TextView
+            android:id="@+id/txt_title_recommend_item_app_list"
+            style="@style/txt_item_classify_recommend_title_apps" />
+        <TextView
+            android:id="@+id/txt_describe_recommend_item_app_list"
+            style="@style/txt_item_classify_recommend_describe_apps"
+            android:layout_below="@id/txt_title_recommend_item_app_list" />
+    </RelativeLayout>
+</LinearLayout>

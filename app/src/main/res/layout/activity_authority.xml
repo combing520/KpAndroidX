@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF5F5F5"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header_not_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_middle"
+        android:textColor="@color/colorTxtContent"
+        android:text="为保障软件的常使用，会向您申请手机系统权限。以下常用权限您可在这里操作管理"
+        android:textSize="@dimen/fontSize_normal" />
+
+    <RelativeLayout
+        android:id="@+id/location"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="位置" />
+
+        <TextView
+            android:id="@+id/locationTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTxtLabel"
+            android:text="允许访问" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/store"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="存储" />
+
+        <TextView
+            android:id="@+id/storageTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+            android:gravity="center_vertical"
+            android:text="允许访问"
+            android:textColor="@color/colorTxtLabel" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/camera"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="相机" />
+
+        <TextView
+            android:id="@+id/cameraTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTxtLabel"
+            android:text="允许访问" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/microphone"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="麦克风" />
+
+        <TextView
+            android:id="@+id/microphoneTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorTxtLabel"
+            android:text="允许访问" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

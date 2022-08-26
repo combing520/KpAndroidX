@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.map.LocationActivity">
+
+    <!--顶部导航-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <TextView
+            android:id="@+id/tv_back_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:text="返回"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_middle" />
+
+
+        <TextView
+            android:id="@+id/tv_send_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:text="发送"
+            android:textColor="@color/colorTxtContent"
+            android:textSize="@dimen/fontSize_middle" />
+
+    </RelativeLayout>
+
+    <!--地图-->
+    <com.amap.api.maps.TextureMapView
+        android:id="@+id/map_location"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_address_detail_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <TextView
+            android:id="@+id/txt_address_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:textColor="@color/colorTxtLabel"
+            android:textSize="@dimen/fontSize_normal" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

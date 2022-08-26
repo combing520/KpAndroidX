@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/container_item_classify">
+        <LinearLayout
+            style="@style/container_item_classify_apps">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:layout_height="90dp">
+                    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                        android:id="@+id/img_item_logo_sub_apps_home"
+                        style="@style/img_item_classify_big_apps"
+                        android:scaleType="centerCrop"
+                        app:roundHeight="@dimen/margin_small"
+                        app:roundWidth="@dimen/margin_small" />
+                    <LinearLayout
+                        android:id="@+id/ll_container_sub_apps_detail"
+                        style="@style/container_item_classify_describe_apps">
+
+                        <TextView
+                            android:id="@+id/txt_item_title_sub_apps_home"
+                            style="@style/txt_item_classify_title_apps" />
+
+                        <TextView
+                            android:id="@+id/txt_item_describe_sub_apps_home"
+                            style="@style/txt_item_classify_describe_apps" />
+                    </LinearLayout>
+                </LinearLayout>
+            <ImageView
+                android:id="@+id/img_item_add_sub_apps_home"
+                style="@style/btn_item_classify_add_apps" />
+        </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list_child_apps_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+</LinearLayout>

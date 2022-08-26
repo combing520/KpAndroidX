@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/margin_small">
+
+    <ImageView
+        android:id="@+id/img_item_pic_integral_user"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="center" />
+
+    <TextView
+        android:id="@+id/txt_item_describe_integral_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/colorTxtContent"
+        android:textSize="@dimen/fontSize_normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_least"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:src="@mipmap/money" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:lines="1"
+            android:text="2000积分"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/fontSize_normal" />
+    </LinearLayout>
+</LinearLayout>

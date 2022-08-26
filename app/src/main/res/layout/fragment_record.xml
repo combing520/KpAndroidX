@@ -1,0 +1,83 @@
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/height_tab">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_record"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:minHeight="@dimen/height_tab"
+            app:tabIndicatorColor="@color/colorPrimary"
+            app:tabIndicatorHeight="@dimen/margin_least"
+            app:tabSelectedTextColor="@color/colorTxtTitle"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance"
+            app:tabTextColor="@color/colorTxtLabel" />
+
+
+        <ImageView
+            style="@style/img_search_record"
+            android:src="@mipmap/ic_search_black"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="@drawable/bg_paike_release">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:scaleType="centerCrop"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:src="@mipmap/ic_record_paike" />
+
+
+            <TextView
+                android:id="@+id/btn_paike_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/margin_least"
+                android:paddingLeft="3dp"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_least"
+                android:text="发布"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_normal" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/container_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <app.cloud.ccwb.cn.linlibrary.viewpager.LinViewpager
+        android:id="@+id/viewpager_record"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

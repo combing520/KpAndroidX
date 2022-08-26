@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.cc1w.app.ui.widget.camera.JCameraView
+        android:id="@+id/cameraView_shoot"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:duration_max="60000"
+        app:iconMargin="20dp"
+        app:iconSize="30dp"
+        app:iconSrc="@mipmap/ic_reversal_paikew" />
+
+</LinearLayout>

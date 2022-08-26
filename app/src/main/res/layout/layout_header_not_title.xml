@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_navigation"
+    android:background="@color/colorWhite">
+
+    <ImageView
+        android:id="@+id/img_back_header_not_title"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/margin_least"
+        android:padding="6dp"
+        android:src="@mipmap/left" />
+
+    <TextView
+        android:id="@+id/txt_header_not_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="240dp"
+        android:layout_centerInParent="true"
+        android:ellipsize="end"
+        android:lines="1"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_big" />
+
+
+    <TextView
+        android:id="@+id/txt_header_not_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:padding="@dimen/margin_small"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_share_header_not_title"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_small"
+        android:padding="6dp"
+        android:src="@mipmap/share"
+        android:visibility="gone" />
+
+</RelativeLayout>

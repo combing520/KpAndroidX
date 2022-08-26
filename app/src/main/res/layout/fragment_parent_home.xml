@@ -1,0 +1,139 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    tools:context="cn.cc1w.app.ui.ui.fragment.ParentHomeFragment">
+
+    <!--顶部-->
+    <FrameLayout
+        android:id="@+id/topContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoImg"
+            android:layout_width="27dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_home_top_logo" />
+
+        <FrameLayout
+            android:id="@+id/home_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical">
+
+            <ImageView
+                android:id="@+id/searchImg"
+                android:layout_width="16dp"
+                android:layout_height="17dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_search" />
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/img_scan_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="left|center_vertical">
+
+            <ImageView
+                android:id="@+id/scanImg"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_scan" />
+
+        </FrameLayout>
+
+
+    </FrameLayout>
+    <!--频道页面-->
+    <RelativeLayout
+        android:id="@+id/ll_tab_parent_home"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_marginBottom="@dimen/height_spit"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topContainer">
+
+        <FrameLayout
+            android:id="@+id/img_parent_home"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:id="@+id/classifyImg"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:src="@mipmap/ic_add_home" />
+
+        </FrameLayout>
+
+        <me.qinc.lib.edgetranslucent.EdgeTransparentView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@id/img_parent_home"
+            app:edge_position="right"
+            app:edge_width="15dp">
+
+            <com.flyco.tablayout.SlidingTabLayout
+                android:id="@+id/tab_parent_home"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tl:tl_indicator_height="0px"
+                tl:tl_indicator_width="0px"
+                tl:tl_tab_padding="8dp"
+                tl:tl_tab_space_equal="false"
+                tl:tl_textBold="NONE"
+                tl:tl_textSelectColor="@color/home_tab_txt_color_select"
+                tl:tl_textUnselectColor="@color/home_tab_txt_color"
+                tl:tl_textsize="@dimen/fontSize_middle" />
+
+        </me.qinc.lib.edgetranslucent.EdgeTransparentView>
+
+
+    </RelativeLayout>
+
+    <app.cloud.ccwb.cn.linlibrary.viewpager.LinViewpager
+        android:id="@+id/viewpager_parent_home"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_tab_parent_home" />
+
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/blank_parent_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

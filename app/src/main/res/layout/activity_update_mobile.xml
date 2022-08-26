@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <View style="@style/spit_line" />
+
+    <LinearLayout style="@style/container_mobile_modify">
+
+        <EditText
+            android:id="@+id/edit_mobile_update"
+            style="@style/container_mobile_modify_edit"
+            android:inputType="phone"
+            android:longClickable="false"
+            android:hint="@string/hint_input_phone" />
+
+        <TextView
+            android:id="@+id/btn_verification_update"
+            style="@style/btn_login_fast_verification_obtain"
+            android:text="@string/hint_verification_obtain" />
+    </LinearLayout>
+
+    <View style="@style/spit_line_horizontal_with_margin" />
+
+    <LinearLayout style="@style/container_mobile_modify">
+
+        <EditText
+            android:id="@+id/edit_verification_update"
+            style="@style/edit_login_fast_verification"
+            android:longClickable="false"
+            android:hint="@string/hint_verification_code_input" />
+    </LinearLayout>
+
+    <View style="@style/spit_line2_horizontal_with_margin" />
+
+
+    <TextView
+        android:id="@+id/btn_mobile_submit_update"
+        style="@style/btn_pink"
+        android:text="绑定" />
+
+
+</LinearLayout>

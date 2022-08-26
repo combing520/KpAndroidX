@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.home.record.TopicRankActivity">
+
+    <include layout="@layout/layout_header_not_title" />
+
+    <ImageView
+        android:id="@+id/img_top_topic_rank"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_rank_topic"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/colorWhite"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabIndicatorHeight="2dp"
+        app:tabSelectedTextColor="@color/colorTxtTitle" />
+
+    <View style="@style/spit_line" />
+
+    <app.cloud.ccwb.cn.linlibrary.viewpager.LinViewpager
+        android:id="@+id/viewpager_rank_topic"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

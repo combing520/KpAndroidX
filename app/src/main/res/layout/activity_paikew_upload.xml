@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+
+    <cn.cc1w.app.ui.widget.camera.JCameraView
+        android:id="@+id/camera_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorGray"
+        app:duration_max="30000"
+        app:iconLeft="@mipmap/ic_album_paikew"
+        app:iconMargin="20dp"
+        app:iconRight="@mipmap/ic_video_paikew"
+        app:iconSize="22dp"
+        android:visibility="gone"
+        app:iconSrc="@mipmap/ic_reversal_paikew">
+
+
+    </cn.cc1w.app.ui.widget.camera.JCameraView>
+
+
+    <app.cloud.ccwb.cn.linlibrary.blankview.BlankView
+        android:id="@+id/blankView_upload"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="@dimen/margin_middle"
+        android:layout_marginTop="@dimen/margin_large"
+        android:background="@drawable/bg_circle_blank">
+
+        <ImageView
+            android:id="@+id/img_cancel_upload"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/margin_small"
+            android:visibility="gone"
+            android:src="@mipmap/ic_cancel_upload" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
+

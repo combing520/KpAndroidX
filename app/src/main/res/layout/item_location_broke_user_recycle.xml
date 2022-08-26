@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginTop="@dimen/margin_middle"
+    android:layout_marginRight="@dimen/margin_small"
+    android:gravity="right"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="84dp"
+        android:layout_marginTop="@dimen/margin_middle"
+        android:layout_marginRight="@dimen/margin_small"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_address_location_user_broke"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_map_broke_top"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_middle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/map_location_user_broke"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="16:9"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+        android:id="@+id/img_avatar_location_user_broke"
+        style="@style/img_avatar_broke"
+        app:roundHeight="20dp"
+        app:roundWidth="20dp" />
+
+</LinearLayout>

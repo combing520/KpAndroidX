@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorHalfTransport">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="24dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txt_photo_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_dialog_bottom_avatar_picker"
+            android:layout_marginBottom="@dimen/height_spit"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="拍照"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+
+        <TextView
+            android:id="@+id/txt_album_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_dialog_bottom_avatar_picker"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="从手机相册选"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+
+        <TextView
+            android:id="@+id/txt_cancel_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_dialog_bottom_avatar_picker"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/colorWhite"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

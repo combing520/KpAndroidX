@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--顶部信息-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--顶部信息-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/img_bg_top_apps_detail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/img"
+                android:scaleType="centerCrop" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#8000" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical">
+
+                <!--应用号信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_middle">
+
+                    <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                        android:id="@+id/img_logo_apps_detail"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_gravity="center_vertical"
+                        android:scaleType="centerCrop"
+                        app:roundHeight="6dp"
+                        app:roundWidth="6dp" />
+
+                    <!--应用号 和描述-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/margin_small"
+                        android:paddingRight="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/txt_title_apps_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fontSize_normal" />
+
+                        <TextView
+                            android:id="@+id/txt_describe_apps_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_least"
+                            android:ellipsize="end"
+                            android:lines="1"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/fontSize_small" />
+                    </LinearLayout>
+
+                    <!--添加应用号-->
+                    <TextView
+                        android:id="@+id/btn_add_apps_detail"
+                        android:layout_width="36dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <!--关注数量和文章数量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="right|center_vertical"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/img"
+                        android:scaleType="center"
+                        android:src="@mipmap/ic_like_apps" />
+
+                    <TextView
+                        android:id="@+id/txt_fans_cnt_apps_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_least" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_middle"
+                        android:contentDescription="@string/img"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/article" />
+
+                    <TextView
+                        android:id="@+id/txt_article_cnt_apps_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_least" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- 顶部导航-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_navigation"
+                android:layout_marginTop="@dimen/margin_large"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_back_header_news_focus"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/img"
+                    android:padding="6dp"
+                    android:src="@mipmap/left" />
+
+                <TextView
+                    android:id="@+id/txt_title_header_news_focus"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/fontSize_big" />
+
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="@dimen/margin_least"
+                    android:contentDescription="@string/img"
+                    android:padding="6dp"
+                    android:src="@mipmap/share"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/tab_apps_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingVertical="@dimen/margin_10"
+        tl:tl_underline_height="0px"
+        tl:tl_tab_padding="@dimen/margin_10"
+        tl:tl_textBold="BOTH"
+        tl:tl_indicator_width="0px"
+        tl:tl_textSelectColor="@color/colorTxtTitle"
+        tl:tl_textUnselectColor="@color/colorTxtLabel"
+        tl:tl_textsize="@dimen/fontSize_middle" />
+
+    <TextView
+        android:id="@+id/txt_layout_tab_apps_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:gravity="center"
+        android:minHeight="@dimen/height_navigation"
+        android:textStyle="bold"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle"
+        android:visibility="gone" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager_app_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never" />
+
+
+    <TextView
+        android:id="@+id/tv_hint_app_detail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="暂无数据"
+        android:textColor="@color/colorTxtTitle"
+        android:textSize="@dimen/fontSize_middle"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--圆角图片-->
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <!--edit-->
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color" />
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StatusBarHeightView">
+        <attr name="use_type" format="integer">
+            <enum name="use_height" value="0" />
+            <enum name="use_padding_top" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="RangeSeekBar">
+        <attr name="max" format="float" />
+        <attr name="min" format="float" />
+        <attr name="reserve" format="float" />
+        <attr name="cells" format="integer" />
+        <attr name="lineColorSelected" format="color" />
+        <attr name="lineColorEdge" format="color" />
+        <attr name="seekBarResId" format="reference" />
+        <attr name="seekBarResId2" format="reference" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TopicEditText">
+        <attr name="object_foreground_color" format="color" />
+        <attr name="object_background_color" format="color" />
+    </declare-styleable>
+
+
+    <declare-styleable name="LinProgressBar">
+        <attr name="type" format="enum">
+            <enum name="folding_circles" value="0" />
+            <enum name="lin_music_dices" value="1" />
+            <enum name="nexus_rotation_cross" value="2" />
+            <enum name="chrome_floating_circles" value="3" />
+        </attr>
+        <attr name="colors" format="reference" />
+    </declare-styleable>
+
+    <attr name="strokeColor" format="color" />
+    <attr name="speed">
+        <enum name="speedOne" value="1" />
+        <enum name="speedTwo" value="2" />
+    </attr>
+
+    <declare-styleable name="RightDiaView">
+        <attr name="strokeColor" />
+        <attr name="speed" />
+    </declare-styleable>
+
+    <declare-styleable name="WrongDiaView">
+        <attr name="strokeColor" />
+        <attr name="speed" />
+    </declare-styleable>
+
+
+    <!--qrCodeScan begin-->
+
+    <declare-styleable name="ViewfinderView">
+        <attr name="maskColor" format="color" />
+        <attr name="frameColor" format="color" />
+        <attr name="cornerColor" format="color" />
+        <attr name="laserColor" format="color" />
+        <attr name="resultPointColor" format="color" />
+        <attr name="labelText" format="string" />
+        <attr name="labelTextColor" format="color" />
+        <attr name="labelTextSize" format="dimension" />
+        <attr name="labelTextPadding" format="dimension" />
+        <attr name="labelTextLocation" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+        <attr name="showResultPoint" format="boolean" />
+        <attr name="frameWidth" format="dimension" />
+        <attr name="frameHeight" format="dimension" />
+        <attr name="gridColumn" format="integer" />
+        <attr name="gridHeight" format="dimension" />
+        <attr name="laserStyle" format="enum">
+            <enum name="none" value="0" />
+            <enum name="line" value="1" />
+            <enum name="grid" value="2" />
+        </attr>
+        <attr name="cornerRectWidth" format="dimension" />
+        <attr name="cornerRectHeight" format="dimension" />
+        <attr name="scannerLineMoveDistance" format="dimension" />
+        <attr name="scannerLineHeight" format="dimension" />
+        <attr name="frameLineWidth" format="dimension" />
+        <attr name="scannerAnimationDelay" format="integer" />
+        <attr name="frameRatio" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="GrayImageView">
+        <attr name="isShowGray" format="boolean" />
+    </declare-styleable>
+    <!--qrCodeScan end-->
+
+
+
+
+    <attr name="interval" format="integer" />
+    <attr name="showIndicator" format="boolean" />
+    <!--<attr name="orientation" format="enum">-->
+    <!--<enum name="horizontal" value="0"/>-->
+    <!--<enum name="vertical" value="1"/>-->
+    <!--</attr>-->
+
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderWidth" format="dimension" />
+        <attr name="borderColor" format="color" />
+        <attr name="displayBorder" format="boolean" />
+        <attr name="need_cover" format="boolean" />
+        <attr name="radiusSize" format="dimension" />
+        <attr name="leftTopRadius" format="dimension" />
+        <attr name="rightTopRadius" format="dimension" />
+        <attr name="leftBottomRadius" format="dimension" />
+        <attr name="rightBottomRadius" format="dimension" />
+        <attr name="displayType" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="circle" value="1" />
+            <enum name="round_rect" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="ExpandableTextView">
+        <attr name="maxCollapsedLines" format="integer"/>
+        <attr name="animDuration" format="integer"/>
+        <attr name="animAlphaStart" format="float"/>
+        <attr name="expandIndicator" format="reference"/>
+        <attr name="collapseIndicator" format="reference"/>
+        <attr name="expandToggleType" format="enum">
+            <enum name="ImageButton" value="0"/>
+            <enum name="TextView" value="1"/>
+        </attr>
+        <attr name="expandableTextId" format="reference"/>
+        <attr name="expandCollapseToggleId" format="reference"/>
+        <attr name="expandToggleOnTextClick" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="PercentLayout_Layout">
+        <attr name="layout_widthPercent" format="string"/>
+        <attr name="layout_heightPercent" format="string"/>
+        <attr name="layout_aspectRatio" format="string"/>
+
+        <attr name="layout_marginPercent" format="string"/>
+        <attr name="layout_marginHorizontalPercent" format="string"/>
+        <attr name="layout_marginVerticalPercent" format="string"/>
+        <attr name="layout_marginLeftPercent" format="string"/>
+        <attr name="layout_marginTopPercent" format="string"/>
+        <attr name="layout_marginRightPercent" format="string"/>
+        <attr name="layout_marginBottomPercent" format="string"/>
+        <attr name="layout_marginStartPercent" format="string"/>
+        <attr name="layout_marginEndPercent" format="string"/>
+
+        <attr name="layout_textSizePercent" format="string"/>
+
+        <attr name="layout_maxWidthPercent" format="string"/>
+        <attr name="layout_maxHeightPercent" format="string"/>
+        <attr name="layout_minWidthPercent" format="string"/>
+        <attr name="layout_minHeightPercent" format="string"/>
+
+        <attr name="layout_paddingPercent" format="string"/>
+        <attr name="layout_paddingHorizontalPercent" format="string"/>
+        <attr name="layout_paddingVerticalPercent" format="string"/>
+        <attr name="layout_paddingTopPercent" format="string"/>
+        <attr name="layout_paddingBottomPercent" format="string"/>
+        <attr name="layout_paddingLeftPercent" format="string"/>
+        <attr name="layout_paddingRightPercent" format="string"/>
+    </declare-styleable>
+
+</resources>

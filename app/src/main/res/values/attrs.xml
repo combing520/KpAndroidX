@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="RoundAngleImageView">
+        <attr name="roundWidth" format="dimension" />
+        <attr name="roundHeight" format="dimension" />
+    </declare-styleable>
+
+
+    <!--徽章，数字-->
+    <declare-styleable name="BadgeViewPro">
+        <attr name="shape" format="integer">
+            <enum name="shape_circle" value="0" />
+            <enum name="shape_oval" value="1" />
+            <enum name="shape_rectangle" value="2" />
+            <enum name="shape_round_rectangle" value="3" />
+        </attr>
+        <attr name="textSize" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="bgColor" format="color" />
+        <attr name="shape_type" format="integer" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ThumbUpView">
+        <attr name="edgeColor" format="color|reference"></attr>
+        <attr name="fillColor" format="color|reference"></attr>
+        <attr name="cracksColor" format="color|reference"></attr>
+        <attr name="bkgColor" format="color|reference"></attr>
+        <attr name="unlikeType" format="integer"></attr>
+    </declare-styleable>
+
+
+
+    <!--圆角图片-->
+    <declare-styleable name="RoundedImageView">
+        <attr name="corner_radius" format="dimension" />
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="round_background" format="boolean" />
+        <attr name="is_oval" format="boolean" />
+        <attr name="android:scaleType" />
+    </declare-styleable>
+
+
+
+
+    <!--QRCODE-->
+    <declare-styleable name="qr_ViewfinderView">
+        <attr name="qr_angleColor" format="color"/>
+        <attr name="qr_hint" format="string"/>
+        <attr name="qr_textHintColor" format="color"/>
+        <attr name="qr_errorHint" format="string"/>
+        <attr name="qr_textErrorHintColor" format="color"/>
+        <attr name="qr_offsetX" format="integer"/>
+        <attr name="qr_offsetY" format="integer"/>
+        <attr name="qr_showPossiblePoint" format="boolean"/>
+    </declare-styleable>
+    <!--QRCODE-->
+
+    <!--动图-->
+    <!--<declare-styleable name="GifView">-->
+    <!--<attr name="gif" format="reference" />-->
+    <!--<attr name="paused" format="boolean" />-->
+    <!--</declare-styleable>-->
+    <!--<declare-styleable name="CustomTheme">-->
+    <!--<attr name="gifViewStyle" format="reference" />-->
+    <!--</declare-styleable>-->
+
+
+    <!-- Progress attr start -->
+    <declare-styleable name="ProgressWheel">
+        <attr name="matProg_progressIndeterminate" format="boolean" />
+        <attr name="matProg_barColor" format="color" />
+        <attr name="matProg_rimColor" format="color" />
+        <attr name="matProg_rimWidth" format="dimension" />
+        <attr name="matProg_spinSpeed" format="float" />
+        <attr name="matProg_barSpinCycleTime" format="integer" />
+        <attr name="matProg_circleRadius" format="dimension" />
+        <attr name="matProg_fillRadius" format="boolean" />
+        <attr name="matProg_barWidth" format="dimension" />
+        <attr name="matProg_linearProgress" format="boolean" />
+    </declare-styleable>
+    <!-- Progress attr end -->
+
+    <!--&lt;!&ndash;QRCODE&ndash;&gt;-->
+    <!--<declare-styleable name="qr_ViewfinderView">-->
+        <!--<attr name="qr_angleColor" format="color"/>-->
+        <!--<attr name="qr_hint" format="string"/>-->
+        <!--<attr name="qr_textHintColor" format="color"/>-->
+        <!--<attr name="qr_errorHint" format="string"/>-->
+        <!--<attr name="qr_textErrorHintColor" format="color"/>-->
+        <!--<attr name="qr_offsetX" format="integer"/>-->
+        <!--<attr name="qr_offsetY" format="integer"/>-->
+        <!--<attr name="qr_showPossiblePoint" format="boolean"/>-->
+    <!--</declare-styleable>-->
+    <!--&lt;!&ndash;QRCODE&ndash;&gt;-->
+
+
+    <!--视频拍摄-->
+    <declare-styleable name="MovieRecorderView">
+        <!-- 开始是否打开摄像头 -->
+        <attr name="is_open_camera" format="boolean" />
+        <!-- 一次拍摄最长时间 -->
+        <attr name="record_max_time" format="integer"/>
+        <!-- 视频分辨率宽度 -->
+        <attr name="vwidth" format="integer"/>
+        <!-- 视频分辨率高度 -->
+        <attr name="vheight" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="StickNavLayout">
+        <!--默认是否悬停tab-->
+        <attr name="isStickNav" format="boolean" />
+        <!--距离悬浮的位置-->
+        <attr name="stickOffset" format="dimension" />
+    </declare-styleable>
+
+
+    <!-- 定义了三个颜色 填充的尺寸 进度 文字的可见性  -->
+    <declare-styleable name="CustomCircleProgressBar">
+        <attr name="cpb_progress_complete_color" format="color"></attr>
+        <attr name="cpb_progress_uncomplete_color" format="color"></attr>
+        <attr name="cpb_progress_fill_color" format="color"></attr>
+        <attr name="cpb_progress_text_color" format="color"></attr>
+        <attr name="cpb_progress_fill_radius" format="dimension"></attr>
+        <attr name="cpb_progress_text_size" format="dimension"></attr>
+        <attr name="cpb_progress_progress" format="integer"></attr>
+        <attr name="cpb_progress_maxprogress" format="integer"></attr>
+
+        <attr name="cpb_progress_text_visibility" format="enum">
+            <enum name="visible" value="1"></enum>
+            <enum name="invisible" value="0"></enum>
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ZLoadingView">
+        <attr name="z_type">
+            <enum name="CircleBuilder" value="0"/>
+            <enum name="ClockBuilder" value="1"/>
+            <enum name="StarBuilder" value="2"/>
+            <enum name="LeafBuilder" value="3"/>
+            <enum name="DoubleCircleBuilder" value="4"/>
+            <enum name="PacManBuilder" value="5"/>
+            <enum name="ElasticBallBuilder" value="6"/>
+            <enum name="InfectionBallBuilder" value="7"/>
+            <enum name="IntertwineBuilder" value="8"/>
+            <enum name="TextBuilder" value="9"/>
+            <enum name="SearchPathBuilder" value="10"/>
+            <enum name="RotateCircleBuilder" value="11"/>
+            <enum name="SingleCircleBuilder" value="12"/>
+        </attr>
+        <attr name="z_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ZLoadingTextView">
+        <attr name="z_text" format="string"/>
+    </declare-styleable>
+
+    <attr name="shadowOffsetX" format="float" />
+    <attr name="shadowOffsetY" format="float" />
+    <attr name="shadowAlpha" format="float" />
+
+    <attr name="calculateAsync" format="boolean" />
+    <attr name="showWhenAllReady" format="boolean" />
+    <attr name="animateShadow" format="boolean" />
+    <attr name="animationDuration" format="integer" />
+
+    <declare-styleable name="MaterialShadowViewWrapper">
+        <attr name="shadowOffsetX" />
+        <attr name="shadowOffsetY" />
+        <attr name="shadowAlpha" />
+
+        <attr name="calculateAsync" />
+        <attr name="showWhenAllReady" />
+        <attr name="animateShadow" />
+        <attr name="animationDuration" />
+    </declare-styleable>
+
+    <declare-styleable name="MaterialShadowFrameLayoutWrapper">
+        <attr name="shadowOffsetX" />
+        <attr name="shadowOffsetY" />
+        <attr name="shadowAlpha" />
+
+        <attr name="calculateAsync" />
+        <attr name="showWhenAllReady" />
+        <attr name="animateShadow" />
+        <attr name="animationDuration" />
+    </declare-styleable>
+
+
+    <declare-styleable name="CustomShadowView">
+        <attr name="shadow_color" format="color" />
+        <attr name="shadow_height" format="dimension" />
+        <attr name="view_id" format="reference" />
+        <attr name="shadow_fuzzy_radius" format="float"/>
+        <attr name="shadow_position">
+            <enum name="up" value="1" />
+            <enum name="down" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ArcLayout">
+        <attr name="arc_height" format="dimension" />
+        <attr name="arc_position">
+            <enum name="bottom" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="left" value="2"/>
+            <enum name="right" value="3"/>
+        </attr>
+        <attr name="arc_cropDirection" format="enum">
+            <enum name="cropInside" value="0" />
+            <enum name="cropOutside" value="1"/>
+        </attr>
+    </declare-styleable>
+
+
+
+    <!--<declare-styleable name="AlignTextView">-->
+        <!--<attr name="align" format="enum">-->
+            <!--<enum name="left" value="0"/>-->
+            <!--<enum name="center" value="1"/>-->
+            <!--<enum name="right" value="2"/>-->
+        <!--</attr>-->
+        <!--<attr name="punctuationConvert" format="boolean"/>-->
+    <!--</declare-styleable>-->
+
+    <!-- 标点转换 -->
+    <!--<declare-styleable name="CBAlignTextView">-->
+        <!--<attr name="punctuationConvert" format="boolean"/>-->
+    <!--</declare-styleable>-->
+
+
+
+    <declare-styleable name="PayPsdInputView">
+
+        <attr name="maxCount" format="integer" />
+        <attr name="circleColor" format="color" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="divideLineWidth" format="dimension" />
+        <attr name="divideLineColor" format="color" />
+        <attr name="rectAngle" format="dimension" />
+        <attr name="focusedColor" format="color"/>
+        <attr name="psdType" format="enum">
+            <enum name="weChat" value="0" />
+            <enum name="bottomLine" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBarView">
+
+        <attr name="circleBgStrokeWidth" format="dimension" />
+        <attr name="progressStrokeWidth" format="dimension" />
+
+        <attr name="circleBgColor" format="color" />
+        <attr name="progressColor" format="color" />
+
+        <attr name="circleAnimationDuration" format="integer" />
+
+        <attr name="isDrawCenterProgressText" format="boolean" />
+
+        <attr name="centerProgressTextColor" format="color"/>
+        <attr name="centerProgressTextSize" format="dimension"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="RadarWaveView">
+
+        <attr name="waveColor" format="color" />
+
+        <attr name="waveAmplitude" format="dimension" />
+
+        <attr name="waveSpeed" format="float" />
+
+        <attr name="waveStartPeriod" format="float" />
+        <attr name="waveStart" format="boolean" />
+
+        <attr name="waveFillTop" format="boolean" />
+        <attr name="waveFillBottom" format="boolean" />
+
+        <attr name="waveFillType" format="enum">
+            <enum name="top" value="0" />
+            <enum name="bottom" value="1" />
+        </attr>
+
+        <attr name="waveType" format="enum">
+            <enum name="sin" value="0" />
+            <enum name="cos" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+
+
+    <declare-styleable name="WheelView">
+        <attr name="itemVisibleNum" format="integer"/>
+
+        <attr name="textColorOuter" format="color" />
+        <attr name="textSizeOuter" format="dimension" />
+        <attr name="textColorCenter" format="color" />
+        <attr name="textSizeCenter" format="dimension" />
+
+        <attr name="lineColor" format="color" />
+
+        <attr name="isLoop" format="boolean"/>
+        <attr name="lineSpaceingDimens" format="dimension"/>
+
+        <attr name="wheelGravity" format="enum" >
+            <enum name="left" value="234"/>
+            <enum name="center" value="354"/>
+            <enum name="right" value="894"/>
+        </attr>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="AlignTextView">
+        <attr name="align">
+            <enum name="center" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+    <attr name="LoadingStyle" format="reference"/>
+
+    <!--************ QMUILoading ***********-->
+    <declare-styleable name="LoadingView">
+        <attr name="loading_view_size" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+
+
+    <attr name="iconSize" format="dimension"/>
+    <attr name="iconMargin" format="dimension"/>
+    <attr name="iconSrc" format="reference"/>
+    <attr name="iconLeft" format="reference"/>
+    <attr name="iconRight" format="reference"/>
+    <attr name="duration_max" format="integer"/>
+    <declare-styleable name="JCameraView">
+        <attr name="iconSize"/>
+        <attr name="iconMargin"/>
+        <attr name="iconSrc"/>
+        <attr name="iconLeft"/>
+        <attr name="iconRight"/>
+        <attr name="duration_max"/>
+    </declare-styleable>
+
+    <declare-styleable name="VerticalScrollTextView">
+        <attr name="vst_sleepTime" format="integer" />
+        <attr name="vst_animDuration" format="integer" />
+        <attr name="vst_textSize" format="dimension" />
+        <attr name="vst_textColor" format="color" />
+        <attr name="vst_singleLine" format="boolean" />
+        <attr name="vst_scrollOrientation">
+            <enum name="up" value="0" />
+            <enum name="down" value="1" />
+        </attr>
+
+    </declare-styleable>
+
+    <declare-styleable name="VerticalScrollLayout">
+        <attr name="vsl_animDuration" format="integer" />
+        <attr name="vsl_sleepTime" format="integer" />
+        <attr name="vsl_isCusDuration" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TextSwitcherView">
+        <attr name="tsv_textColor" format="color"/>
+        <attr name="tsv_textSize" format="dimension"/>
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <!--导航头-->
+    <include
+        layout="@layout/layout_header_not_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation" />
+    <!--手机号码-->
+    <LinearLayout
+        style="@style/container_register_phone"
+        app:layout_marginLeftPercent="5%"
+        app:layout_widthPercent="90%">
+
+        <TextView
+            style="@style/txt_label_register"
+            android:text="+86" />
+
+        <View style="@style/line_spit_vertical_login_fast" />
+
+        <EditText
+            android:id="@+id/edit_phone_forgetPwd"
+            style="@style/edit_register_phone"
+            android:longClickable="false"
+            android:hint="@string/hint_input_phone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/container_register_top"
+        app:layout_marginLeftPercent="5%"
+        app:layout_widthPercent="90%">
+
+        <!--验证码-->
+        <LinearLayout style="@style/container_register_edit">
+
+            <EditText
+                android:id="@+id/edit_verification_forgetPwd"
+                style="@style/edit_register_verification"
+                android:longClickable="false"
+                android:hint="@string/hint_verification_code_input" />
+
+            <View style="@style/line_spit_vertical_login_fast" />
+
+            <TextView
+                android:id="@+id/txt_verification_obtain_forgetPwd"
+                style="@style/btn_login_fast_verification_obtain"
+                android:text="@string/hint_verification_obtain" />
+
+        </LinearLayout>
+
+        <View style="@style/line_spit_register" />
+
+        <EditText
+            android:id="@+id/edit_password_forgetPwd"
+            style="@style/edit_register_pwd"
+            android:longClickable="false"
+            android:hint="请输入新密码(6-20位英文或数字)" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_spit_small"
+            android:background="@color/colorTxtLabel" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_submit_forgetPwd"
+        style="@style/btn_login_fast_login"
+        android:text="@string/hint_submit"
+        app:layout_marginLeftPercent="5%"
+        app:layout_widthPercent="90%" />
+
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

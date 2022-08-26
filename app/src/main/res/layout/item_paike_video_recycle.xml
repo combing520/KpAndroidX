@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.gridlayout.widget.GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle"
+        app:columnCount="1"
+        app:rowCount="3">
+
+        <LinearLayout
+            android:id="@+id/ll_prise_detail_paikew"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_least"
+            android:paddingRight="@dimen/margin_least"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:id="@+id/img_prise_detail_paikew"
+                android:layout_width="24dp"
+                android:layout_height="18dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                android:id="@+id/txt_cnt_prise_detail_paikew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_big"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_comment_detail_paikew"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_least"
+            android:paddingRight="@dimen/margin_least"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_comment_paikew" />
+
+            <TextView
+                android:id="@+id/txt_cnt_commend_detail_paikew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_middle"
+                android:text="0"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_big"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_share_detail_paikew"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_least"
+            android:paddingRight="@dimen/margin_least"
+            app:layout_columnWeight="1"
+            app:layout_rowWeight="1">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="@dimen/margin_small"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_share_paikew" />
+
+        </LinearLayout>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <!--底部用户信息-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_large"
+        android:layout_marginLeft="@dimen/margin_big"
+        android:layout_marginRight="@dimen/margin_big"
+        android:orientation="vertical">
+
+        <!--广告-->
+        <LinearLayout
+            android:id="@+id/ll_promotion_detail_paikew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_middle"
+            android:background="@drawable/bg_advertisement_paikew"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/txt_promotion_detail_paikew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/margin_least"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_least"
+                android:paddingTop="@dimen/margin_least"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_small" />
+
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_right_white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+
+            <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                android:id="@+id/img_avatar_detail_paikew"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop"
+                app:roundHeight="20dp"
+                app:roundWidth="20dp" />
+
+            <TextView
+                android:id="@+id/txt_username_detail_paikew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_middle"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/fontSize_small" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_describe_detail_paikew"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_normal" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/layout_header_not_title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation" />
+
+    <!--推送通知-->
+    <RelativeLayout style="@style/itemSetting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="推送通知" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:checked="true"
+            app:theme="@style/switchTheme" />
+
+    </RelativeLayout>
+
+    <!--清除缓存-->
+    <RelativeLayout
+        android:id="@+id/relate_cache_clear_setting"
+        style="@style/itemSetting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="清除缓存" />
+
+        <TextView
+            android:id="@+id/txt_cnt_cache_setting"
+            style="@style/itemLabelRightSetting" />
+
+    </RelativeLayout>
+
+    <!--账号管理-->
+    <RelativeLayout
+        android:id="@+id/relate_account_manager_setting"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="账号管理" />
+
+        <ImageView
+            style="@style/right_arrow"
+            android:src="@mipmap/right" />
+
+    </RelativeLayout>
+
+    <!--意见反馈-->
+    <RelativeLayout
+        android:id="@+id/relate_feedback_setting"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="意见反馈" />
+
+        <ImageView
+            style="@style/right_arrow"
+            android:src="@mipmap/right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relate_authority_setting"
+        style="@style/item2Setting">
+
+        <TextView
+            style="@style/itemLabelSetting"
+            android:text="权限管理" />
+
+        <ImageView
+            style="@style/right_arrow"
+            android:src="@mipmap/right" />
+
+    </RelativeLayout>
+
+    <!--退出登录-->
+    <TextView
+        android:id="@+id/btn_logout_setting"
+        style="@style/btn_pink"
+        android:text="登出" />
+
+    <ImageView
+        style="@style/img_logo_setting"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/txt_version_setting"
+        style="@style/setting_txt_version" />
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

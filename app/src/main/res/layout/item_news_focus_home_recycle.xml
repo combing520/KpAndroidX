@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/height_spit"
+    android:background="@color/colorWhite">
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner_top_home"
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:scaleType="centerCrop"
+        tl:banner_indicator_normal_width="@dimen/width_indicator"
+        tl:banner_indicator_selected_width="@dimen/width_indicator"
+        app:layout_constraintDimensionRatio="3:2"
+        tl:banner_indicator_height="@dimen/width_indicator"
+        tl:layout_constraintLeft_toLeftOf="parent"
+        tl:layout_constraintRight_toRightOf="parent"
+        tl:banner_indicator_selected_color="@color/colorWhite"
+        app:banner_indicator_normal_color="@color/colorTxtLabel"
+        tl:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="left|top"
+        android:lineSpacingExtra="3dp"
+        android:maxLines="2"
+        android:minLines="2"
+        android:padding="@dimen/margin_middle"
+        android:textColor="@color/home_tab_txt_color"
+        android:textSize="@dimen/fontSize_20"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/banner_top_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

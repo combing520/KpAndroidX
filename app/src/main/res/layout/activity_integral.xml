@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.usercenter.integral.IntegralActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_navigation"
+        android:background="@color/colorWhite">
+
+        <ImageView
+            android:id="@+id/img_back_integral"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_least"
+            android:padding="6dp"
+            android:src="@mipmap/left" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="积分"
+            android:textColor="@color/colorTxtTitle"
+            android:textSize="@dimen/fontSize_big" />
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView_integral"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_spit"
+        android:overScrollMode="never"
+        android:visibility="gone">
+
+        <app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--顶部-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#f65153"
+                android:padding="@dimen/margin_middle">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txt_total_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_middle" />
+
+                    <TextView
+                        android:id="@+id/txt_today_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_normal" />
+
+                    <TextView
+                        android:id="@+id/txt_detail_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/margin_small"
+                        android:paddingBottom="@dimen/margin_least"
+                        android:text="积分详情 >>"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="@dimen/fontSize_normal" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_convert_integral"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/bg_container_white"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle"
+                    android:text="积分排行"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/fontSize_normal" />
+
+            </LinearLayout>
+            <!--签到-->
+            <app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/margin_middle"
+                android:paddingBottom="@dimen/margin_middle">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="每日连续签到"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:text="查看签到记录,连续签到可以获更多积分 >>"
+                    android:textSize="@dimen/fontSize_small" />
+
+                <!--签到列表-->
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:visibility="gone"
+                    app:columnCount="6"
+                    app:rowCount="1">
+
+                    <!--第一天-->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="第一天"
+                            android:textSize="@dimen/fontSize_least" />
+
+                    </LinearLayout>
+                    <!--第二天-->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:textSize="@dimen/fontSize_least" />
+                    </LinearLayout>
+
+
+                    <!--第三天-->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+2"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="第三天"
+                            android:textSize="@dimen/fontSize_least" />
+
+                    </LinearLayout>
+
+                    <!--第四天-->
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+3"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="第四天"
+                            android:textSize="@dimen/fontSize_least" />
+
+                    </LinearLayout>
+
+                    <!--第五天-->
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+3"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="第五天"
+                            android:textSize="@dimen/fontSize_least" />
+                    </LinearLayout>
+
+                    <!--第六天-->
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <TextView
+                            android:layout_width="@dimen/width_radius_sign"
+                            android:layout_height="@dimen/width_radius_sign"
+                            android:gravity="center"
+                            android:text="+5"
+                            android:textSize="@dimen/fontSize_middle" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:text="第五天以上"
+                            android:textSize="@dimen/fontSize_least" />
+                    </LinearLayout>
+
+                </androidx.gridlayout.widget.GridLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/list_sign_integral"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:overScrollMode="never" />
+
+
+                <TextView
+                    android:id="@+id/btn_sign_integral"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_big"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:gravity="center"
+                    android:text="签到"
+                    android:textSize="@dimen/fontSize_big"
+                    app:layout_widthPercent="50%" />
+
+            </app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>
+            <!--签到原因列表-->
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_integral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+        </app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

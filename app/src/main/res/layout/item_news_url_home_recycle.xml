@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tl="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_label"
+        android:background="@color/colorWhite"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/ic_active_new" />
+
+        <TextView
+            android:id="@+id/group_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@id/logo"
+            android:text="活动"
+            android:textColor="@color/colorPrimary"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/btn_more"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more" />
+
+        <LinearLayout
+            android:id="@+id/ll_more_url_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@mipmap/ic_classify_hl" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:text="更多"
+                android:textColor="@color/color_home_red"
+                android:textSize="@dimen/fontSize_middle" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.youth.banner.Banner
+        android:id="@+id/viewPager_active_url_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tl:banner_indicator_height="@dimen/width_indicator"
+        android:paddingHorizontal="@dimen/margin_middle"
+        android:background="@color/colorWhite"
+        tl:banner_indicator_normal_color="@color/colorWhite"
+        tl:banner_indicator_normal_width="@dimen/width_indicator"
+        tl:banner_indicator_selected_color="@color/colorPrimary"
+        tl:banner_indicator_selected_width="@dimen/width_indicator" />
+
+</LinearLayout>

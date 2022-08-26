@@ -1,0 +1,172 @@
+<app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!--手机号 和验证码输入-->
+        <LinearLayout
+            style="@style/container_login_fast_top"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="90%">
+
+            <EditText
+                android:id="@+id/edit_phone_fast"
+                style="@style/edit_login_fast_phone"
+                android:hint="@string/hint_input_phone" />
+
+            <View style="@style/line_spit_login_fast" />
+
+            <LinearLayout style="@style/container_login_fast_edit">
+
+                <EditText
+                    android:id="@+id/edit_verification_fast"
+                    style="@style/edit_login_fast_verification"
+                    android:hint="@string/hint_input_verification" />
+
+                <View style="@style/line_spit_vertical_login_fast" />
+
+
+                <TextView
+                    android:id="@+id/txt_verification_obtain_fast"
+                    style="@style/btn_login_fast_verification_obtain"
+                    android:text="@string/hint_verification_obtain" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--登录-->
+        <TextView
+            android:id="@+id/txt_login_fast"
+            style="@style/btn_login_fast_login"
+            android:text="@string/hint_login"
+            app:layout_marginLeftPercent="5%"
+            app:layout_widthPercent="90%" />
+
+
+        <!--第三方登录-->
+        <TextView
+            style="@style/txt_login_fast_hint"
+            android:text="@string/hint_txt_login"
+            android:visibility="gone"
+            app:layout_marginLeftPercent="5%"
+            app:layout_marginTopPercent="20%"
+            app:layout_widthPercent="90%" />
+
+    </app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>
+    <!--<View style="@style/line_spit_login_fast" />-->
+
+
+    <androidx.gridlayout.widget.GridLayout
+        style="@style/container_login_fast_grid"
+        app:layout_heightPercent="20%"
+        app:layout_marginLeftPercent="5%"
+        app:layout_marginTopPercent="20%"
+        app:layout_widthPercent="90%">
+
+        <!--微信账号登录-->
+        <LinearLayout
+            android:id="@+id/ll_login_wechat_fast"
+            style="@style/item_container_login_fast_grid"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/item_icon_login_fast_grid"
+                android:src="@mipmap/ic_wechat" />
+
+            <!--<TextView-->
+            <!--style="@style/item_txt_login_fast_grid"-->
+            <!--android:text="@string/hint_login_wx" />-->
+
+        </LinearLayout>
+
+        <!--微博账号登录-->
+        <LinearLayout
+            android:id="@+id/ll_login_weibo_fast"
+            style="@style/item_container_login_fast_grid"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/item_icon_login_fast_grid"
+                android:src="@mipmap/ic_weibo" />
+
+            <!--<TextView-->
+            <!--style="@style/item_txt_login_fast_grid"-->
+            <!--android:text="@string/hint_login_weiBo" />-->
+
+        </LinearLayout>
+        <!--QQ账号登录-->
+        <LinearLayout
+            android:id="@+id/ll_login_qq_fast"
+            style="@style/item_container_login_fast_grid"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                style="@style/item_icon_login_fast_grid"
+                android:src="@mipmap/ic_qq" />
+            <!--<TextView-->
+            <!--style="@style/item_txt_login_fast_grid"-->
+            <!--android:text="@string/hint_login_qq" />-->
+
+        </LinearLayout>
+
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_middle"
+        android:gravity="center_horizontal">
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_least" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="您已阅读并同意"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_agreenment"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <TextView
+            android:id="@+id/tv_agreement_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《用户协议》"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_agreenment"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="及"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_agreenment"
+            android:textSize="@dimen/fontSize_normal" />
+
+        <TextView
+            android:id="@+id/tv_policy_fast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="《隐私政策》"
+            android:gravity="center_vertical"
+            android:textColor="@color/color_agreenment"
+            android:textSize="@dimen/fontSize_normal" />
+    </LinearLayout>
+
+</app.cloud.ccwb.cn.linlibrary.percent.PercentLinearLayout>

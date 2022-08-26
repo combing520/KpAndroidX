@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorGray"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    tools:context="cn.cc1w.app.ui.ui.home.upload.PaiKewPictureUploadActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite"
+        android:paddingLeft="@dimen/margin_middle"
+        android:paddingRight="@dimen/margin_middle"
+        android:paddingTop="@dimen/margin_small">
+
+        <ImageView
+            android:id="@+id/img_close_video_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/margin_small"
+            android:src="@mipmap/ic_close_comment_paikew" />
+
+        <TextView
+            android:id="@+id/txt_release_video_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/container_shape_rectangle_red"
+            android:gravity="center"
+            android:paddingBottom="@dimen/margin_least"
+            android:paddingLeft="@dimen/margin_middle"
+            android:paddingRight="@dimen/margin_middle"
+            android:paddingTop="@dimen/margin_least"
+            android:text="发布"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/fontSize_normal" />
+
+    </RelativeLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <app.cloud.ccwb.cn.linlibrary.image.RoundAngleImageView
+                    android:id="@+id/img_post_video_upload"
+                    android:layout_width="100dp"
+                    android:layout_height="140dp"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    app:roundHeight="10dp"
+                    app:roundWidth="10dp" />
+
+                <TextView
+                    android:id="@+id/txt_topic_video_upload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_toRightOf="@id/img_post_video_upload"
+                    android:background="@drawable/bg_container_edit_gary"
+                    android:paddingBottom="@dimen/margin_least"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle"
+                    android:paddingTop="@dimen/margin_least"
+                    android:text="#话题"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_normal"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/margin_middle"
+                    android:layout_toRightOf="@id/txt_topic_video_upload"
+                    android:background="@drawable/bg_container_edit_gary"
+                    android:paddingBottom="@dimen/margin_least"
+                    android:paddingLeft="@dimen/margin_middle"
+                    android:paddingRight="@dimen/margin_middle"
+                    android:paddingTop="@dimen/margin_least"
+                    android:text="更换音乐"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_normal"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle">
+
+                <app.cloud.ccwb.cn.linlibrary.topicEdit.TopicEditText
+                    android:id="@+id/edit_title_video_upload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorTransport"
+                    android:hint="写标题并且添加合适的话题,能让更多的人看到～"
+                    android:maxLength="40"
+                    android:minHeight="@dimen/height_edit"
+                    android:textColor="@color/colorTxtTitle"
+                    android:textSize="@dimen/fontSize_normal"
+                    android:longClickable="false"
+                    app:object_background_color="#FFE4B5"
+                    app:object_foreground_color="@color/colorPrimary" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_spit"
+                    android:background="@color/colorGray" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txt_cnt_video_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/margin_middle"
+                android:paddingRight="@dimen/margin_middle"
+                android:text="0/40" />
+
+            <!--分类-->
+            <com.zhy.view.flowlayout.TagFlowLayout
+                android:id="@+id/flow_layout_video_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                app:max_select="-1" />
+
+
+            <!--热门话题-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:padding="@dimen/margin_small">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@mipmap/ic_hot_topic" />
+
+                <LinearLayout style="@style/container_home_search">
+
+                    <ImageView
+                        style="@style/icon_home_search"
+                        android:src="@mipmap/ic_search" />
+
+                    <EditText
+                        android:id="@+id/edit_search_video_upload"
+                        style="@style/edit_home_search2"
+                        android:hint="搜索话题"
+                        android:longClickable="false"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list_topic_hot_video_upload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+
+            <TextView
+                android:id="@+id/txt_none_search_video_upload"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="暂无相关话题"
+                android:visibility="gone"
+                android:textColor="@color/colorTxtLabel"
+                android:textSize="@dimen/fontSize_middle" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
